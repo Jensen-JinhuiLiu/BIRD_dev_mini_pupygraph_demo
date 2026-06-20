@@ -1,0 +1,62 @@
+# Try the PuppyGraph AI Assistant against a sample dataset.
+#
+# Starts PuppyGraph alongside a Postgres image that comes preloaded with 18
+# small, real-world sample databases (news personalization, credit profiles,
+# museum artifacts, polar research equipment, ...). Once both are up, the
+# AI Assistant in the web UI can browse the data and build a graph schema
+# for you.
+#
+# Quick start:
+#   export ANTHROPIC_API_KEY=sk-ant-...
+#   docker compose up -d
+#
+# Open http://localhost:8081 and log in (puppygraph / puppygraph123).
+#
+# Required:
+#   ANTHROPIC_API_KEY     -- your Anthropic API key for the AI Assistant
+#                           (https://console.anthropic.com/)
+# Optional:
+#   AI_MODEL              -- defaults to claude-opus-4-7
+#   PUPPYGRAPH_IMAGE      -- defaults to puppygraph/puppygraph:1.0-preview
+services:
+  puppygraph:
+    image: ${PUPPYGRAPH_IMAGE:-puppygraph/puppygraph:1.0-preview}
+    container_name: ai-agent-puppygraph
+    environment:
+      - PUPPYGRAPH_USERNAME=puppygraph
+      - PUPPYGRAPH_PASSWORD=puppygraph123
+      - AI_ENABLED=true
+      - AI_PROVIDER=anthropic
+      - AI_MODEL=${AI_MODEL:-claude-opus-4-7}
+      - AI_API_KEY=${ANTHROPIC_API_KEY:?ANTHROPIC_API_KEY is required for the AI Assistant. Get one at https://console.anthropic.com/}
+    ports:
+      - "8081:8081"   # Web UI
+      - "8182:8182"   # Gremlin
+      - "7687:7687"   # Bolt (Neo4j-compatible)
+    networks:
+      - ai-agent-net
+  postgres:
+    # Sample databases from the LiveSQLBench-Base-Lite benchmark (livesqlbench.ai).
+    image: shawnxxh/bird-interact-postgresql:latest
+    container_name: ai-agent-postgres
+    hostname: postgres
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=123123
+      # Required by the image's initialization scripts.
+      - TZ=Asia/Hong_Kong
+    # No host port mapping -- PuppyGraph reaches Postgres internally over
+    # ai-agent-net. Skipping the mapping avoids collision with a Postgres
+    # already running on the host's 5432.
+    ports:
+      - "5432:5432"
+    networks:
+      - ai-agent-net
+
+networks:
+  ai-agent-net:
+    name: ai-agent-net
+
+volumes:
+  sample_data:
+    name: ai_agent_sample_data

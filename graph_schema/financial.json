@@ -1,0 +1,843 @@
+{
+  "catalog": [
+    {
+      "name": "bird_dev_mini",
+      "type": "postgresql",
+      "jdbc": {
+        "username": "root",
+        "password": "123123",
+        "jdbcUri": "jdbc:postgresql://postgres:5432/bird_dev_mini",
+        "enableMetaCache": "true",
+        "metaCacheExpireSec": "600"
+      }
+    }
+  ],
+  "node": [
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "financial",
+          "table": "district",
+          "mappedField": [
+            {
+              "sourceFieldName": "district_id",
+              "targetFieldName": "district_id"
+            },
+            {
+              "sourceFieldName": "a2",
+              "targetFieldName": "name"
+            },
+            {
+              "sourceFieldName": "a3",
+              "targetFieldName": "region"
+            },
+            {
+              "sourceFieldName": "a4",
+              "targetFieldName": "population"
+            },
+            {
+              "sourceFieldName": "a5",
+              "targetFieldName": "num_municipalities_lt_500"
+            },
+            {
+              "sourceFieldName": "a6",
+              "targetFieldName": "num_municipalities_500_1999"
+            },
+            {
+              "sourceFieldName": "a7",
+              "targetFieldName": "num_municipalities_2000_9999"
+            },
+            {
+              "sourceFieldName": "a8",
+              "targetFieldName": "num_municipalities_gt_10000"
+            },
+            {
+              "sourceFieldName": "a9",
+              "targetFieldName": "num_cities"
+            },
+            {
+              "sourceFieldName": "a10",
+              "targetFieldName": "urban_ratio"
+            },
+            {
+              "sourceFieldName": "a11",
+              "targetFieldName": "avg_salary"
+            },
+            {
+              "sourceFieldName": "a12",
+              "targetFieldName": "unemployment_rate_1995"
+            },
+            {
+              "sourceFieldName": "a13",
+              "targetFieldName": "unemployment_rate_1996"
+            },
+            {
+              "sourceFieldName": "a14",
+              "targetFieldName": "entrepreneurs_per_1000"
+            },
+            {
+              "sourceFieldName": "a15",
+              "targetFieldName": "num_crimes_1995"
+            },
+            {
+              "sourceFieldName": "a16",
+              "targetFieldName": "num_crimes_1996"
+            }
+          ]
+        }
+      },
+      "label": "District",
+      "id": [
+        {
+          "name": "district_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "region",
+          "type": "String"
+        },
+        {
+          "name": "population",
+          "type": "String"
+        },
+        {
+          "name": "num_municipalities_lt_500",
+          "type": "String"
+        },
+        {
+          "name": "num_municipalities_500_1999",
+          "type": "String"
+        },
+        {
+          "name": "num_municipalities_2000_9999",
+          "type": "String"
+        },
+        {
+          "name": "num_municipalities_gt_10000",
+          "type": "Long"
+        },
+        {
+          "name": "num_cities",
+          "type": "Long"
+        },
+        {
+          "name": "urban_ratio",
+          "type": "Float"
+        },
+        {
+          "name": "avg_salary",
+          "type": "Long"
+        },
+        {
+          "name": "unemployment_rate_1995",
+          "type": "Float"
+        },
+        {
+          "name": "unemployment_rate_1996",
+          "type": "Float"
+        },
+        {
+          "name": "entrepreneurs_per_1000",
+          "type": "Long"
+        },
+        {
+          "name": "num_crimes_1995",
+          "type": "Long"
+        },
+        {
+          "name": "num_crimes_1996",
+          "type": "Long"
+        },
+        {
+          "name": "district_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "financial",
+          "table": "client",
+          "mappedField": [
+            {
+              "sourceFieldName": "client_id",
+              "targetFieldName": "client_id"
+            },
+            {
+              "sourceFieldName": "gender",
+              "targetFieldName": "gender"
+            },
+            {
+              "sourceFieldName": "birth_date",
+              "targetFieldName": "birth_date"
+            }
+          ]
+        }
+      },
+      "label": "Client",
+      "id": [
+        {
+          "name": "client_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "gender",
+          "type": "String"
+        },
+        {
+          "name": "birth_date",
+          "type": "Date"
+        },
+        {
+          "name": "client_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "financial",
+          "table": "account",
+          "mappedField": [
+            {
+              "sourceFieldName": "account_id",
+              "targetFieldName": "account_id"
+            },
+            {
+              "sourceFieldName": "frequency",
+              "targetFieldName": "frequency"
+            },
+            {
+              "sourceFieldName": "date",
+              "targetFieldName": "opened_date"
+            }
+          ]
+        }
+      },
+      "label": "Account",
+      "id": [
+        {
+          "name": "account_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "frequency",
+          "type": "String"
+        },
+        {
+          "name": "opened_date",
+          "type": "Date"
+        },
+        {
+          "name": "account_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "financial",
+          "table": "disp",
+          "mappedField": [
+            {
+              "sourceFieldName": "disp_id",
+              "targetFieldName": "disp_id"
+            },
+            {
+              "sourceFieldName": "type",
+              "targetFieldName": "role"
+            }
+          ]
+        }
+      },
+      "label": "Disposition",
+      "id": [
+        {
+          "name": "disp_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "role",
+          "type": "String"
+        },
+        {
+          "name": "disp_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "financial",
+          "table": "card",
+          "mappedField": [
+            {
+              "sourceFieldName": "card_id",
+              "targetFieldName": "card_id"
+            },
+            {
+              "sourceFieldName": "type",
+              "targetFieldName": "card_type"
+            },
+            {
+              "sourceFieldName": "issued",
+              "targetFieldName": "issued_date"
+            }
+          ]
+        }
+      },
+      "label": "BankCard",
+      "id": [
+        {
+          "name": "card_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "card_type",
+          "type": "String"
+        },
+        {
+          "name": "issued_date",
+          "type": "Date"
+        },
+        {
+          "name": "card_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "financial",
+          "table": "loan",
+          "mappedField": [
+            {
+              "sourceFieldName": "loan_id",
+              "targetFieldName": "loan_id"
+            },
+            {
+              "sourceFieldName": "date",
+              "targetFieldName": "granted_date"
+            },
+            {
+              "sourceFieldName": "amount",
+              "targetFieldName": "amount"
+            },
+            {
+              "sourceFieldName": "duration",
+              "targetFieldName": "duration"
+            },
+            {
+              "sourceFieldName": "payments",
+              "targetFieldName": "monthly_payment"
+            },
+            {
+              "sourceFieldName": "status",
+              "targetFieldName": "status"
+            }
+          ]
+        }
+      },
+      "label": "Loan",
+      "id": [
+        {
+          "name": "loan_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "granted_date",
+          "type": "Date"
+        },
+        {
+          "name": "amount",
+          "type": "Long"
+        },
+        {
+          "name": "duration",
+          "type": "Long"
+        },
+        {
+          "name": "monthly_payment",
+          "type": "Float"
+        },
+        {
+          "name": "status",
+          "type": "String"
+        },
+        {
+          "name": "loan_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "financial",
+          "table": "order",
+          "mappedField": [
+            {
+              "sourceFieldName": "order_id",
+              "targetFieldName": "order_id"
+            },
+            {
+              "sourceFieldName": "bank_to",
+              "targetFieldName": "recipient_bank"
+            },
+            {
+              "sourceFieldName": "account_to",
+              "targetFieldName": "recipient_account"
+            },
+            {
+              "sourceFieldName": "amount",
+              "targetFieldName": "amount"
+            },
+            {
+              "sourceFieldName": "k_symbol",
+              "targetFieldName": "payment_purpose"
+            }
+          ]
+        }
+      },
+      "label": "PaymentOrder",
+      "id": [
+        {
+          "name": "order_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "recipient_bank",
+          "type": "String"
+        },
+        {
+          "name": "recipient_account",
+          "type": "Long"
+        },
+        {
+          "name": "amount",
+          "type": "Float"
+        },
+        {
+          "name": "payment_purpose",
+          "type": "String"
+        },
+        {
+          "name": "order_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "financial",
+          "table": "trans",
+          "mappedField": [
+            {
+              "sourceFieldName": "trans_id",
+              "targetFieldName": "trans_id"
+            },
+            {
+              "sourceFieldName": "date",
+              "targetFieldName": "transaction_date"
+            },
+            {
+              "sourceFieldName": "type",
+              "targetFieldName": "direction"
+            },
+            {
+              "sourceFieldName": "operation",
+              "targetFieldName": "operation"
+            },
+            {
+              "sourceFieldName": "amount",
+              "targetFieldName": "amount"
+            },
+            {
+              "sourceFieldName": "balance",
+              "targetFieldName": "balance"
+            },
+            {
+              "sourceFieldName": "k_symbol",
+              "targetFieldName": "characterization"
+            },
+            {
+              "sourceFieldName": "bank",
+              "targetFieldName": "partner_bank"
+            },
+            {
+              "sourceFieldName": "account",
+              "targetFieldName": "partner_account"
+            }
+          ]
+        }
+      },
+      "label": "Transaction",
+      "id": [
+        {
+          "name": "trans_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "transaction_date",
+          "type": "Date"
+        },
+        {
+          "name": "direction",
+          "type": "String"
+        },
+        {
+          "name": "operation",
+          "type": "String"
+        },
+        {
+          "name": "amount",
+          "type": "Long"
+        },
+        {
+          "name": "balance",
+          "type": "Long"
+        },
+        {
+          "name": "characterization",
+          "type": "String"
+        },
+        {
+          "name": "partner_bank",
+          "type": "String"
+        },
+        {
+          "name": "partner_account",
+          "type": "Long"
+        },
+        {
+          "name": "trans_id",
+          "type": "Long"
+        }
+      ]
+    }
+  ],
+  "edge": [
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "financial",
+          "table": "client",
+          "mappedField": [
+            {
+              "sourceFieldName": "client_id",
+              "targetFieldName": "client_id"
+            },
+            {
+              "sourceFieldName": "district_id",
+              "targetFieldName": "district_id"
+            }
+          ]
+        }
+      },
+      "label": "LIVES_IN",
+      "fromNodeLabel": "Client",
+      "toNodeLabel": "District",
+      "fromKey": [
+        {
+          "name": "client_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "district_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "financial",
+          "table": "account",
+          "mappedField": [
+            {
+              "sourceFieldName": "account_id",
+              "targetFieldName": "account_id"
+            },
+            {
+              "sourceFieldName": "district_id",
+              "targetFieldName": "district_id"
+            }
+          ]
+        }
+      },
+      "label": "BRANCH_IN",
+      "fromNodeLabel": "Account",
+      "toNodeLabel": "District",
+      "fromKey": [
+        {
+          "name": "account_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "district_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "financial",
+          "table": "disp",
+          "mappedField": [
+            {
+              "sourceFieldName": "client_id",
+              "targetFieldName": "client_id"
+            },
+            {
+              "sourceFieldName": "disp_id",
+              "targetFieldName": "disp_id"
+            }
+          ]
+        }
+      },
+      "label": "HAS_DISPOSITION",
+      "fromNodeLabel": "Client",
+      "toNodeLabel": "Disposition",
+      "fromKey": [
+        {
+          "name": "client_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "disp_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "financial",
+          "table": "disp",
+          "mappedField": [
+            {
+              "sourceFieldName": "disp_id",
+              "targetFieldName": "disp_id"
+            },
+            {
+              "sourceFieldName": "account_id",
+              "targetFieldName": "account_id"
+            }
+          ]
+        }
+      },
+      "label": "ON_ACCOUNT",
+      "fromNodeLabel": "Disposition",
+      "toNodeLabel": "Account",
+      "fromKey": [
+        {
+          "name": "disp_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "account_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "financial",
+          "table": "card",
+          "mappedField": [
+            {
+              "sourceFieldName": "disp_id",
+              "targetFieldName": "disp_id"
+            },
+            {
+              "sourceFieldName": "card_id",
+              "targetFieldName": "card_id"
+            }
+          ]
+        }
+      },
+      "label": "HAS_CARD",
+      "fromNodeLabel": "Disposition",
+      "toNodeLabel": "BankCard",
+      "fromKey": [
+        {
+          "name": "disp_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "card_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "financial",
+          "table": "loan",
+          "mappedField": [
+            {
+              "sourceFieldName": "account_id",
+              "targetFieldName": "account_id"
+            },
+            {
+              "sourceFieldName": "loan_id",
+              "targetFieldName": "loan_id"
+            }
+          ]
+        }
+      },
+      "label": "HAS_LOAN",
+      "fromNodeLabel": "Account",
+      "toNodeLabel": "Loan",
+      "fromKey": [
+        {
+          "name": "account_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "loan_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "financial",
+          "table": "order",
+          "mappedField": [
+            {
+              "sourceFieldName": "account_id",
+              "targetFieldName": "account_id"
+            },
+            {
+              "sourceFieldName": "order_id",
+              "targetFieldName": "order_id"
+            }
+          ]
+        }
+      },
+      "label": "ISSUED",
+      "fromNodeLabel": "Account",
+      "toNodeLabel": "PaymentOrder",
+      "fromKey": [
+        {
+          "name": "account_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "order_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "financial",
+          "table": "trans",
+          "mappedField": [
+            {
+              "sourceFieldName": "account_id",
+              "targetFieldName": "account_id"
+            },
+            {
+              "sourceFieldName": "trans_id",
+              "targetFieldName": "trans_id"
+            }
+          ]
+        }
+      },
+      "label": "RECORDED",
+      "fromNodeLabel": "Account",
+      "toNodeLabel": "Transaction",
+      "fromKey": [
+        {
+          "name": "account_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "trans_id",
+          "type": "Long"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1367 @@
+{
+  "catalog": [
+    {
+      "name": "bird_dev_mini",
+      "type": "postgresql",
+      "jdbc": {
+        "username": "root",
+        "password": "123123",
+        "jdbcUri": "jdbc:postgresql://postgres:5432/bird_dev_mini",
+        "enableMetaCache": "true",
+        "metaCacheExpireSec": "600"
+      }
+    }
+  ],
+  "node": [
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "races",
+          "mappedField": [
+            {
+              "sourceFieldName": "raceid",
+              "targetFieldName": "race_id"
+            },
+            {
+              "sourceFieldName": "year",
+              "targetFieldName": "season_year"
+            },
+            {
+              "sourceFieldName": "round",
+              "targetFieldName": "round_number"
+            },
+            {
+              "sourceFieldName": "circuitid",
+              "targetFieldName": "circuit_id"
+            },
+            {
+              "sourceFieldName": "name",
+              "targetFieldName": "name"
+            },
+            {
+              "sourceFieldName": "date",
+              "targetFieldName": "race_date"
+            },
+            {
+              "sourceFieldName": "time",
+              "targetFieldName": "race_start_time"
+            },
+            {
+              "sourceFieldName": "url",
+              "targetFieldName": "wikipedia_url"
+            },
+            {
+              "sourceFieldName": "raceid",
+              "targetFieldName": "race_id"
+            }
+          ]
+        }
+      },
+      "label": "Race",
+      "id": [
+        {
+          "name": "race_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "season_year",
+          "type": "Long"
+        },
+        {
+          "name": "round_number",
+          "type": "Long"
+        },
+        {
+          "name": "circuit_id",
+          "type": "Long"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "race_date",
+          "type": "Date"
+        },
+        {
+          "name": "race_start_time",
+          "type": "String"
+        },
+        {
+          "name": "wikipedia_url",
+          "type": "String"
+        },
+        {
+          "name": "race_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "constructors",
+          "mappedField": [
+            {
+              "sourceFieldName": "constructorid",
+              "targetFieldName": "constructor_id"
+            },
+            {
+              "sourceFieldName": "constructorref",
+              "targetFieldName": "constructor_ref_slug"
+            },
+            {
+              "sourceFieldName": "name",
+              "targetFieldName": "name"
+            },
+            {
+              "sourceFieldName": "nationality",
+              "targetFieldName": "nationality"
+            },
+            {
+              "sourceFieldName": "url",
+              "targetFieldName": "wikipedia_url"
+            },
+            {
+              "sourceFieldName": "constructorid",
+              "targetFieldName": "constructor_id"
+            }
+          ]
+        }
+      },
+      "label": "Constructor",
+      "id": [
+        {
+          "name": "constructor_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "constructor_ref_slug",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "nationality",
+          "type": "String"
+        },
+        {
+          "name": "wikipedia_url",
+          "type": "String"
+        },
+        {
+          "name": "constructor_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "circuits",
+          "mappedField": [
+            {
+              "sourceFieldName": "circuitid",
+              "targetFieldName": "circuit_id"
+            },
+            {
+              "sourceFieldName": "circuitref",
+              "targetFieldName": "circuit_ref_slug"
+            },
+            {
+              "sourceFieldName": "name",
+              "targetFieldName": "name"
+            },
+            {
+              "sourceFieldName": "location",
+              "targetFieldName": "location"
+            },
+            {
+              "sourceFieldName": "country",
+              "targetFieldName": "country"
+            },
+            {
+              "sourceFieldName": "lat",
+              "targetFieldName": "latitude"
+            },
+            {
+              "sourceFieldName": "lng",
+              "targetFieldName": "longitude"
+            },
+            {
+              "sourceFieldName": "alt",
+              "targetFieldName": "altitude_meters"
+            },
+            {
+              "sourceFieldName": "url",
+              "targetFieldName": "wikipedia_url"
+            },
+            {
+              "sourceFieldName": "circuitid",
+              "targetFieldName": "circuit_id"
+            }
+          ]
+        }
+      },
+      "label": "Circuit",
+      "id": [
+        {
+          "name": "circuit_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "circuit_ref_slug",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "location",
+          "type": "String"
+        },
+        {
+          "name": "country",
+          "type": "String"
+        },
+        {
+          "name": "latitude",
+          "type": "Float"
+        },
+        {
+          "name": "longitude",
+          "type": "Float"
+        },
+        {
+          "name": "altitude_meters",
+          "type": "Long"
+        },
+        {
+          "name": "wikipedia_url",
+          "type": "String"
+        },
+        {
+          "name": "circuit_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "status",
+          "mappedField": [
+            {
+              "sourceFieldName": "statusid",
+              "targetFieldName": "status_id"
+            },
+            {
+              "sourceFieldName": "status",
+              "targetFieldName": "status_description"
+            },
+            {
+              "sourceFieldName": "statusid",
+              "targetFieldName": "status_id"
+            }
+          ]
+        }
+      },
+      "label": "Status",
+      "id": [
+        {
+          "name": "status_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "status_description",
+          "type": "String"
+        },
+        {
+          "name": "status_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "seasons",
+          "mappedField": [
+            {
+              "sourceFieldName": "year",
+              "targetFieldName": "year"
+            },
+            {
+              "sourceFieldName": "url",
+              "targetFieldName": "wikipedia_url"
+            },
+            {
+              "sourceFieldName": "year",
+              "targetFieldName": "year"
+            }
+          ]
+        }
+      },
+      "label": "Season",
+      "id": [
+        {
+          "name": "year",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "wikipedia_url",
+          "type": "String"
+        },
+        {
+          "name": "year",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "drivers",
+          "mappedField": [
+            {
+              "sourceFieldName": "driverid",
+              "targetFieldName": "driver_id"
+            },
+            {
+              "sourceFieldName": "driverref",
+              "targetFieldName": "driver_ref_slug"
+            },
+            {
+              "sourceFieldName": "number",
+              "targetFieldName": "driver_permanent_number"
+            },
+            {
+              "sourceFieldName": "code",
+              "targetFieldName": "driver_code_abbreviation"
+            },
+            {
+              "sourceFieldName": "forename",
+              "targetFieldName": "forename"
+            },
+            {
+              "sourceFieldName": "surname",
+              "targetFieldName": "surname"
+            },
+            {
+              "sourceFieldName": "dob",
+              "targetFieldName": "date_of_birth"
+            },
+            {
+              "sourceFieldName": "nationality",
+              "targetFieldName": "nationality"
+            },
+            {
+              "sourceFieldName": "url",
+              "targetFieldName": "wikipedia_url"
+            }
+          ]
+        }
+      },
+      "label": "Driver",
+      "id": [
+        {
+          "name": "driver_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "driver_ref_slug",
+          "type": "String"
+        },
+        {
+          "name": "driver_permanent_number",
+          "type": "Long"
+        },
+        {
+          "name": "driver_code_abbreviation",
+          "type": "String"
+        },
+        {
+          "name": "forename",
+          "type": "String"
+        },
+        {
+          "name": "surname",
+          "type": "String"
+        },
+        {
+          "name": "date_of_birth",
+          "type": "Date"
+        },
+        {
+          "name": "nationality",
+          "type": "String"
+        },
+        {
+          "name": "wikipedia_url",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "results",
+          "mappedField": [
+            {
+              "sourceFieldName": "resultid",
+              "targetFieldName": "result_id"
+            },
+            {
+              "sourceFieldName": "raceid",
+              "targetFieldName": "race_id"
+            },
+            {
+              "sourceFieldName": "driverid",
+              "targetFieldName": "driver_id"
+            },
+            {
+              "sourceFieldName": "constructorid",
+              "targetFieldName": "constructor_id"
+            },
+            {
+              "sourceFieldName": "number",
+              "targetFieldName": "car_number_used_in_race"
+            },
+            {
+              "sourceFieldName": "grid",
+              "targetFieldName": "starting_grid_position"
+            },
+            {
+              "sourceFieldName": "position",
+              "targetFieldName": "driver_finish_position_in_race"
+            },
+            {
+              "sourceFieldName": "positiontext",
+              "targetFieldName": "driver_finish_position_text"
+            },
+            {
+              "sourceFieldName": "positionorder",
+              "targetFieldName": "driver_finish_order_in_race"
+            },
+            {
+              "sourceFieldName": "points",
+              "targetFieldName": "driver_points_awarded_in_race"
+            },
+            {
+              "sourceFieldName": "laps",
+              "targetFieldName": "driver_laps_completed_in_race"
+            },
+            {
+              "sourceFieldName": "time",
+              "targetFieldName": "driver_race_finish_time"
+            },
+            {
+              "sourceFieldName": "milliseconds",
+              "targetFieldName": "driver_race_finish_milliseconds"
+            },
+            {
+              "sourceFieldName": "fastestlap",
+              "targetFieldName": "driver_fastest_lap_number_in_race"
+            },
+            {
+              "sourceFieldName": "rank",
+              "targetFieldName": "driver_fastest_lap_rank_in_race"
+            },
+            {
+              "sourceFieldName": "fastestlaptime",
+              "targetFieldName": "driver_fastest_lap_time_summary"
+            },
+            {
+              "sourceFieldName": "fastestlapspeed",
+              "targetFieldName": "driver_fastest_lap_speed_summary"
+            },
+            {
+              "sourceFieldName": "statusid",
+              "targetFieldName": "status_id"
+            }
+          ]
+        }
+      },
+      "label": "DriverSingleRaceResult",
+      "id": [
+        {
+          "name": "result_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "race_id",
+          "type": "Long"
+        },
+        {
+          "name": "driver_id",
+          "type": "Long"
+        },
+        {
+          "name": "constructor_id",
+          "type": "Long"
+        },
+        {
+          "name": "car_number_used_in_race",
+          "type": "Long"
+        },
+        {
+          "name": "starting_grid_position",
+          "type": "Long"
+        },
+        {
+          "name": "driver_finish_position_in_race",
+          "type": "Long"
+        },
+        {
+          "name": "driver_finish_position_text",
+          "type": "String"
+        },
+        {
+          "name": "driver_finish_order_in_race",
+          "type": "Long"
+        },
+        {
+          "name": "driver_points_awarded_in_race",
+          "type": "Float"
+        },
+        {
+          "name": "driver_laps_completed_in_race",
+          "type": "Long"
+        },
+        {
+          "name": "driver_race_finish_time",
+          "type": "String"
+        },
+        {
+          "name": "driver_race_finish_milliseconds",
+          "type": "Long"
+        },
+        {
+          "name": "driver_fastest_lap_number_in_race",
+          "type": "Long"
+        },
+        {
+          "name": "driver_fastest_lap_rank_in_race",
+          "type": "Long"
+        },
+        {
+          "name": "driver_fastest_lap_time_summary",
+          "type": "String"
+        },
+        {
+          "name": "driver_fastest_lap_speed_summary",
+          "type": "String"
+        },
+        {
+          "name": "status_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "qualifying",
+          "mappedField": [
+            {
+              "sourceFieldName": "qualifyid",
+              "targetFieldName": "qualifying_id"
+            },
+            {
+              "sourceFieldName": "raceid",
+              "targetFieldName": "race_id"
+            },
+            {
+              "sourceFieldName": "driverid",
+              "targetFieldName": "driver_id"
+            },
+            {
+              "sourceFieldName": "constructorid",
+              "targetFieldName": "constructor_id"
+            },
+            {
+              "sourceFieldName": "number",
+              "targetFieldName": "car_number_used_in_qualifying"
+            },
+            {
+              "sourceFieldName": "position",
+              "targetFieldName": "qualifying_session_position"
+            },
+            {
+              "sourceFieldName": "q1",
+              "targetFieldName": "qualifying_q1_time"
+            },
+            {
+              "sourceFieldName": "q2",
+              "targetFieldName": "qualifying_q2_time"
+            },
+            {
+              "sourceFieldName": "q3",
+              "targetFieldName": "qualifying_q3_time"
+            }
+          ]
+        }
+      },
+      "label": "DriverQualifyingResult",
+      "id": [
+        {
+          "name": "qualifying_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "race_id",
+          "type": "Long"
+        },
+        {
+          "name": "driver_id",
+          "type": "Long"
+        },
+        {
+          "name": "constructor_id",
+          "type": "Long"
+        },
+        {
+          "name": "car_number_used_in_qualifying",
+          "type": "Long"
+        },
+        {
+          "name": "qualifying_session_position",
+          "type": "Long"
+        },
+        {
+          "name": "qualifying_q1_time",
+          "type": "String"
+        },
+        {
+          "name": "qualifying_q2_time",
+          "type": "String"
+        },
+        {
+          "name": "qualifying_q3_time",
+          "type": "String"
+        }
+      ]
+    }
+  ],
+  "edge": [
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "races",
+          "mappedField": [
+            {
+              "sourceFieldName": "raceid",
+              "targetFieldName": "race_id"
+            },
+            {
+              "sourceFieldName": "circuitid",
+              "targetFieldName": "circuit_id"
+            }
+          ]
+        }
+      },
+      "label": "AT_CIRCUIT",
+      "fromNodeLabel": "Race",
+      "toNodeLabel": "Circuit",
+      "fromKey": [
+        {
+          "name": "race_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "circuit_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "races",
+          "mappedField": [
+            {
+              "sourceFieldName": "raceid",
+              "targetFieldName": "race_id"
+            },
+            {
+              "sourceFieldName": "year",
+              "targetFieldName": "year"
+            }
+          ]
+        }
+      },
+      "label": "IN_SEASON",
+      "fromNodeLabel": "Race",
+      "toNodeLabel": "Season",
+      "fromKey": [
+        {
+          "name": "race_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "year",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "results",
+          "mappedField": [
+            {
+              "sourceFieldName": "resultid",
+              "targetFieldName": "result_id"
+            },
+            {
+              "sourceFieldName": "raceid",
+              "targetFieldName": "race_id"
+            }
+          ]
+        }
+      },
+      "label": "DRIVER_RESULT_IN_RACE",
+      "fromNodeLabel": "DriverSingleRaceResult",
+      "toNodeLabel": "Race",
+      "fromKey": [
+        {
+          "name": "result_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "race_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "results",
+          "mappedField": [
+            {
+              "sourceFieldName": "resultid",
+              "targetFieldName": "result_id"
+            },
+            {
+              "sourceFieldName": "driverid",
+              "targetFieldName": "driver_id"
+            }
+          ]
+        }
+      },
+      "label": "DRIVER_RESULT_FOR_DRIVER",
+      "fromNodeLabel": "DriverSingleRaceResult",
+      "toNodeLabel": "Driver",
+      "fromKey": [
+        {
+          "name": "result_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "driver_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "results",
+          "mappedField": [
+            {
+              "sourceFieldName": "resultid",
+              "targetFieldName": "result_id"
+            },
+            {
+              "sourceFieldName": "constructorid",
+              "targetFieldName": "constructor_id"
+            }
+          ]
+        }
+      },
+      "label": "DRIVER_RESULT_FOR_CONSTRUCTOR",
+      "fromNodeLabel": "DriverSingleRaceResult",
+      "toNodeLabel": "Constructor",
+      "fromKey": [
+        {
+          "name": "result_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "constructor_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "results",
+          "mappedField": [
+            {
+              "sourceFieldName": "resultid",
+              "targetFieldName": "result_id"
+            },
+            {
+              "sourceFieldName": "statusid",
+              "targetFieldName": "status_id"
+            }
+          ]
+        }
+      },
+      "label": "DRIVER_RESULT_HAS_STATUS",
+      "fromNodeLabel": "DriverSingleRaceResult",
+      "toNodeLabel": "Status",
+      "fromKey": [
+        {
+          "name": "result_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "status_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "qualifying",
+          "mappedField": [
+            {
+              "sourceFieldName": "qualifyid",
+              "targetFieldName": "qualifying_id"
+            },
+            {
+              "sourceFieldName": "raceid",
+              "targetFieldName": "race_id"
+            }
+          ]
+        }
+      },
+      "label": "QUALIFYING_IN_RACE",
+      "fromNodeLabel": "DriverQualifyingResult",
+      "toNodeLabel": "Race",
+      "fromKey": [
+        {
+          "name": "qualifying_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "race_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "qualifying",
+          "mappedField": [
+            {
+              "sourceFieldName": "qualifyid",
+              "targetFieldName": "qualifying_id"
+            },
+            {
+              "sourceFieldName": "driverid",
+              "targetFieldName": "driver_id"
+            }
+          ]
+        }
+      },
+      "label": "QUALIFYING_FOR_DRIVER",
+      "fromNodeLabel": "DriverQualifyingResult",
+      "toNodeLabel": "Driver",
+      "fromKey": [
+        {
+          "name": "qualifying_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "driver_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "qualifying",
+          "mappedField": [
+            {
+              "sourceFieldName": "qualifyid",
+              "targetFieldName": "qualifying_id"
+            },
+            {
+              "sourceFieldName": "constructorid",
+              "targetFieldName": "constructor_id"
+            }
+          ]
+        }
+      },
+      "label": "QUALIFYING_FOR_CONSTRUCTOR",
+      "fromNodeLabel": "DriverQualifyingResult",
+      "toNodeLabel": "Constructor",
+      "fromKey": [
+        {
+          "name": "qualifying_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "constructor_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "pitstops",
+          "mappedField": [
+            {
+              "sourceFieldName": "driverid",
+              "targetFieldName": "driver_id"
+            },
+            {
+              "sourceFieldName": "raceid",
+              "targetFieldName": "race_id"
+            },
+            {
+              "sourceFieldName": "stop",
+              "targetFieldName": "pit_stop_sequence_number"
+            },
+            {
+              "sourceFieldName": "lap",
+              "targetFieldName": "pit_stop_lap_number"
+            },
+            {
+              "sourceFieldName": "time",
+              "targetFieldName": "pit_stop_time_of_day"
+            },
+            {
+              "sourceFieldName": "duration",
+              "targetFieldName": "pit_stop_duration_text_seconds"
+            },
+            {
+              "sourceFieldName": "milliseconds",
+              "targetFieldName": "pit_stop_duration_milliseconds"
+            }
+          ]
+        }
+      },
+      "label": "MADE_PIT_STOP",
+      "fromNodeLabel": "Driver",
+      "toNodeLabel": "Race",
+      "fromKey": [
+        {
+          "name": "driver_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "race_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "pit_stop_sequence_number",
+          "type": "Long"
+        },
+        {
+          "name": "pit_stop_lap_number",
+          "type": "Long"
+        },
+        {
+          "name": "pit_stop_time_of_day",
+          "type": "String"
+        },
+        {
+          "name": "pit_stop_duration_text_seconds",
+          "type": "String"
+        },
+        {
+          "name": "pit_stop_duration_milliseconds",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "driverstandings",
+          "mappedField": [
+            {
+              "sourceFieldName": "driverid",
+              "targetFieldName": "driver_id"
+            },
+            {
+              "sourceFieldName": "raceid",
+              "targetFieldName": "race_id"
+            },
+            {
+              "sourceFieldName": "driverstandingsid",
+              "targetFieldName": "driver_championship_standing_id"
+            },
+            {
+              "sourceFieldName": "points",
+              "targetFieldName": "driver_cumulative_championship_points_after_race"
+            },
+            {
+              "sourceFieldName": "position",
+              "targetFieldName": "driver_championship_rank_after_race"
+            },
+            {
+              "sourceFieldName": "positiontext",
+              "targetFieldName": "driver_championship_rank_text_after_race"
+            },
+            {
+              "sourceFieldName": "wins",
+              "targetFieldName": "driver_cumulative_wins_after_race"
+            }
+          ]
+        }
+      },
+      "label": "HAS_DRIVER_CHAMPIONSHIP_STANDING",
+      "fromNodeLabel": "Driver",
+      "toNodeLabel": "Race",
+      "fromKey": [
+        {
+          "name": "driver_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "race_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "driver_championship_standing_id",
+          "type": "Long"
+        },
+        {
+          "name": "driver_cumulative_championship_points_after_race",
+          "type": "Float"
+        },
+        {
+          "name": "driver_championship_rank_after_race",
+          "type": "Long"
+        },
+        {
+          "name": "driver_championship_rank_text_after_race",
+          "type": "String"
+        },
+        {
+          "name": "driver_cumulative_wins_after_race",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "constructorstandings",
+          "mappedField": [
+            {
+              "sourceFieldName": "constructorid",
+              "targetFieldName": "constructor_id"
+            },
+            {
+              "sourceFieldName": "raceid",
+              "targetFieldName": "race_id"
+            },
+            {
+              "sourceFieldName": "constructorstandingsid",
+              "targetFieldName": "constructor_championship_standing_id"
+            },
+            {
+              "sourceFieldName": "points",
+              "targetFieldName": "constructor_cumulative_championship_points_after_race"
+            },
+            {
+              "sourceFieldName": "position",
+              "targetFieldName": "constructor_championship_rank_after_race"
+            },
+            {
+              "sourceFieldName": "positiontext",
+              "targetFieldName": "constructor_championship_rank_text_after_race"
+            },
+            {
+              "sourceFieldName": "wins",
+              "targetFieldName": "constructor_cumulative_wins_after_race"
+            }
+          ]
+        }
+      },
+      "label": "HAS_CONSTRUCTOR_CHAMPIONSHIP_STANDING",
+      "fromNodeLabel": "Constructor",
+      "toNodeLabel": "Race",
+      "fromKey": [
+        {
+          "name": "constructor_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "race_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "constructor_championship_standing_id",
+          "type": "Long"
+        },
+        {
+          "name": "constructor_cumulative_championship_points_after_race",
+          "type": "Float"
+        },
+        {
+          "name": "constructor_championship_rank_after_race",
+          "type": "Long"
+        },
+        {
+          "name": "constructor_championship_rank_text_after_race",
+          "type": "String"
+        },
+        {
+          "name": "constructor_cumulative_wins_after_race",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "constructorresults",
+          "mappedField": [
+            {
+              "sourceFieldName": "constructorid",
+              "targetFieldName": "constructor_id"
+            },
+            {
+              "sourceFieldName": "raceid",
+              "targetFieldName": "race_id"
+            },
+            {
+              "sourceFieldName": "constructorresultsid",
+              "targetFieldName": "constructor_single_race_result_id"
+            },
+            {
+              "sourceFieldName": "points",
+              "targetFieldName": "constructor_points_awarded_in_race"
+            },
+            {
+              "sourceFieldName": "status",
+              "targetFieldName": "constructor_result_disqualification_code"
+            }
+          ]
+        }
+      },
+      "label": "HAS_CONSTRUCTOR_SINGLE_RACE_RESULT",
+      "fromNodeLabel": "Constructor",
+      "toNodeLabel": "Race",
+      "fromKey": [
+        {
+          "name": "constructor_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "race_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "constructor_single_race_result_id",
+          "type": "Long"
+        },
+        {
+          "name": "constructor_points_awarded_in_race",
+          "type": "Float"
+        },
+        {
+          "name": "constructor_result_disqualification_code",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "formula_1",
+          "table": "laptimes",
+          "mappedField": [
+            {
+              "sourceFieldName": "driverid",
+              "targetFieldName": "driver_id"
+            },
+            {
+              "sourceFieldName": "raceid",
+              "targetFieldName": "race_id"
+            },
+            {
+              "sourceFieldName": "lap",
+              "targetFieldName": "lap_number_in_race"
+            },
+            {
+              "sourceFieldName": "position",
+              "targetFieldName": "driver_position_during_lap"
+            },
+            {
+              "sourceFieldName": "time",
+              "targetFieldName": "individual_lap_time"
+            },
+            {
+              "sourceFieldName": "milliseconds",
+              "targetFieldName": "individual_lap_milliseconds"
+            }
+          ]
+        }
+      },
+      "label": "RECORDED_DRIVER_LAP",
+      "fromNodeLabel": "Driver",
+      "toNodeLabel": "Race",
+      "fromKey": [
+        {
+          "name": "driver_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "race_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "lap_number_in_race",
+          "type": "Long"
+        },
+        {
+          "name": "driver_position_during_lap",
+          "type": "Long"
+        },
+        {
+          "name": "individual_lap_time",
+          "type": "String"
+        },
+        {
+          "name": "individual_lap_milliseconds",
+          "type": "Long"
+        }
+      ]
+    }
+  ]
+}
