@@ -1,0 +1,888 @@
+{
+  "catalog": [
+    {
+      "name": "bird_dev_mini",
+      "type": "postgresql",
+      "jdbc": {
+        "username": "root",
+        "password": "123123",
+        "jdbcUri": "jdbc:postgresql://postgres:5432/bird_dev_mini",
+        "enableMetaCache": "true",
+        "metaCacheExpireSec": "600"
+      }
+    }
+  ],
+  "node": [
+    {
+      "label": "Schools",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "california_schools",
+          "table": "schools",
+          "mappedField": [
+            {
+              "sourceFieldName": "cdscode",
+              "targetFieldName": "cdscode"
+            },
+            {
+              "sourceFieldName": "ncesdist",
+              "targetFieldName": "ncesdist"
+            },
+            {
+              "sourceFieldName": "ncesschool",
+              "targetFieldName": "ncesschool"
+            },
+            {
+              "sourceFieldName": "statustype",
+              "targetFieldName": "statustype"
+            },
+            {
+              "sourceFieldName": "county",
+              "targetFieldName": "county"
+            },
+            {
+              "sourceFieldName": "district",
+              "targetFieldName": "district"
+            },
+            {
+              "sourceFieldName": "school",
+              "targetFieldName": "school"
+            },
+            {
+              "sourceFieldName": "street",
+              "targetFieldName": "street"
+            },
+            {
+              "sourceFieldName": "streetabr",
+              "targetFieldName": "streetabr"
+            },
+            {
+              "sourceFieldName": "city",
+              "targetFieldName": "city"
+            },
+            {
+              "sourceFieldName": "zip",
+              "targetFieldName": "zip"
+            },
+            {
+              "sourceFieldName": "state",
+              "targetFieldName": "state"
+            },
+            {
+              "sourceFieldName": "mailstreet",
+              "targetFieldName": "mailstreet"
+            },
+            {
+              "sourceFieldName": "mailstrabr",
+              "targetFieldName": "mailstrabr"
+            },
+            {
+              "sourceFieldName": "mailcity",
+              "targetFieldName": "mailcity"
+            },
+            {
+              "sourceFieldName": "mailzip",
+              "targetFieldName": "mailzip"
+            },
+            {
+              "sourceFieldName": "mailstate",
+              "targetFieldName": "mailstate"
+            },
+            {
+              "sourceFieldName": "phone",
+              "targetFieldName": "phone"
+            },
+            {
+              "sourceFieldName": "ext",
+              "targetFieldName": "ext"
+            },
+            {
+              "sourceFieldName": "website",
+              "targetFieldName": "website"
+            },
+            {
+              "sourceFieldName": "opendate",
+              "targetFieldName": "opendate"
+            },
+            {
+              "sourceFieldName": "closeddate",
+              "targetFieldName": "closeddate"
+            },
+            {
+              "sourceFieldName": "charter",
+              "targetFieldName": "charter"
+            },
+            {
+              "sourceFieldName": "charternum",
+              "targetFieldName": "charternum"
+            },
+            {
+              "sourceFieldName": "fundingtype",
+              "targetFieldName": "fundingtype"
+            },
+            {
+              "sourceFieldName": "doc",
+              "targetFieldName": "doc"
+            },
+            {
+              "sourceFieldName": "doctype",
+              "targetFieldName": "doctype"
+            },
+            {
+              "sourceFieldName": "soc",
+              "targetFieldName": "soc"
+            },
+            {
+              "sourceFieldName": "soctype",
+              "targetFieldName": "soctype"
+            },
+            {
+              "sourceFieldName": "edopscode",
+              "targetFieldName": "edopscode"
+            },
+            {
+              "sourceFieldName": "edopsname",
+              "targetFieldName": "edopsname"
+            },
+            {
+              "sourceFieldName": "eilcode",
+              "targetFieldName": "eilcode"
+            },
+            {
+              "sourceFieldName": "eilname",
+              "targetFieldName": "eilname"
+            },
+            {
+              "sourceFieldName": "gsoffered",
+              "targetFieldName": "gsoffered"
+            },
+            {
+              "sourceFieldName": "gsserved",
+              "targetFieldName": "gsserved"
+            },
+            {
+              "sourceFieldName": "virtual",
+              "targetFieldName": "virtual"
+            },
+            {
+              "sourceFieldName": "magnet",
+              "targetFieldName": "magnet"
+            },
+            {
+              "sourceFieldName": "latitude",
+              "targetFieldName": "latitude"
+            },
+            {
+              "sourceFieldName": "longitude",
+              "targetFieldName": "longitude"
+            },
+            {
+              "sourceFieldName": "admfname1",
+              "targetFieldName": "admfname1"
+            },
+            {
+              "sourceFieldName": "admlname1",
+              "targetFieldName": "admlname1"
+            },
+            {
+              "sourceFieldName": "admemail1",
+              "targetFieldName": "admemail1"
+            },
+            {
+              "sourceFieldName": "admfname2",
+              "targetFieldName": "admfname2"
+            },
+            {
+              "sourceFieldName": "admlname2",
+              "targetFieldName": "admlname2"
+            },
+            {
+              "sourceFieldName": "admemail2",
+              "targetFieldName": "admemail2"
+            },
+            {
+              "sourceFieldName": "admfname3",
+              "targetFieldName": "admfname3"
+            },
+            {
+              "sourceFieldName": "admlname3",
+              "targetFieldName": "admlname3"
+            },
+            {
+              "sourceFieldName": "admemail3",
+              "targetFieldName": "admemail3"
+            },
+            {
+              "sourceFieldName": "lastupdate",
+              "targetFieldName": "lastupdate"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "cdscode",
+          "type": "String"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "cdscode",
+          "type": "String"
+        },
+        {
+          "name": "ncesdist",
+          "type": "String"
+        },
+        {
+          "name": "ncesschool",
+          "type": "String"
+        },
+        {
+          "name": "statustype",
+          "type": "String"
+        },
+        {
+          "name": "county",
+          "type": "String"
+        },
+        {
+          "name": "district",
+          "type": "String"
+        },
+        {
+          "name": "school",
+          "type": "String"
+        },
+        {
+          "name": "street",
+          "type": "String"
+        },
+        {
+          "name": "streetabr",
+          "type": "String"
+        },
+        {
+          "name": "city",
+          "type": "String"
+        },
+        {
+          "name": "zip",
+          "type": "String"
+        },
+        {
+          "name": "state",
+          "type": "String"
+        },
+        {
+          "name": "mailstreet",
+          "type": "String"
+        },
+        {
+          "name": "mailstrabr",
+          "type": "String"
+        },
+        {
+          "name": "mailcity",
+          "type": "String"
+        },
+        {
+          "name": "mailzip",
+          "type": "String"
+        },
+        {
+          "name": "mailstate",
+          "type": "String"
+        },
+        {
+          "name": "phone",
+          "type": "String"
+        },
+        {
+          "name": "ext",
+          "type": "String"
+        },
+        {
+          "name": "website",
+          "type": "String"
+        },
+        {
+          "name": "opendate",
+          "type": "Date"
+        },
+        {
+          "name": "closeddate",
+          "type": "Date"
+        },
+        {
+          "name": "charter",
+          "type": "Long"
+        },
+        {
+          "name": "charternum",
+          "type": "String"
+        },
+        {
+          "name": "fundingtype",
+          "type": "String"
+        },
+        {
+          "name": "doc",
+          "type": "String"
+        },
+        {
+          "name": "doctype",
+          "type": "String"
+        },
+        {
+          "name": "soc",
+          "type": "String"
+        },
+        {
+          "name": "soctype",
+          "type": "String"
+        },
+        {
+          "name": "edopscode",
+          "type": "String"
+        },
+        {
+          "name": "edopsname",
+          "type": "String"
+        },
+        {
+          "name": "eilcode",
+          "type": "String"
+        },
+        {
+          "name": "eilname",
+          "type": "String"
+        },
+        {
+          "name": "gsoffered",
+          "type": "String"
+        },
+        {
+          "name": "gsserved",
+          "type": "String"
+        },
+        {
+          "name": "virtual",
+          "type": "String"
+        },
+        {
+          "name": "magnet",
+          "type": "Long"
+        },
+        {
+          "name": "latitude",
+          "type": "Float"
+        },
+        {
+          "name": "longitude",
+          "type": "Float"
+        },
+        {
+          "name": "admfname1",
+          "type": "String"
+        },
+        {
+          "name": "admlname1",
+          "type": "String"
+        },
+        {
+          "name": "admemail1",
+          "type": "String"
+        },
+        {
+          "name": "admfname2",
+          "type": "String"
+        },
+        {
+          "name": "admlname2",
+          "type": "String"
+        },
+        {
+          "name": "admemail2",
+          "type": "String"
+        },
+        {
+          "name": "admfname3",
+          "type": "String"
+        },
+        {
+          "name": "admlname3",
+          "type": "String"
+        },
+        {
+          "name": "admemail3",
+          "type": "String"
+        },
+        {
+          "name": "lastupdate",
+          "type": "Date"
+        }
+      ]
+    },
+    {
+      "label": "Frpm",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "california_schools",
+          "table": "frpm",
+          "mappedField": [
+            {
+              "sourceFieldName": "cdscode",
+              "targetFieldName": "cdscode"
+            },
+            {
+              "sourceFieldName": "Academic Year",
+              "targetFieldName": "academic_year"
+            },
+            {
+              "sourceFieldName": "County Code",
+              "targetFieldName": "county_code"
+            },
+            {
+              "sourceFieldName": "District Code",
+              "targetFieldName": "district_code"
+            },
+            {
+              "sourceFieldName": "School Code",
+              "targetFieldName": "school_code"
+            },
+            {
+              "sourceFieldName": "County Name",
+              "targetFieldName": "county_name"
+            },
+            {
+              "sourceFieldName": "District Name",
+              "targetFieldName": "district_name"
+            },
+            {
+              "sourceFieldName": "School Name",
+              "targetFieldName": "school_name"
+            },
+            {
+              "sourceFieldName": "District Type",
+              "targetFieldName": "district_type"
+            },
+            {
+              "sourceFieldName": "School Type",
+              "targetFieldName": "school_type"
+            },
+            {
+              "sourceFieldName": "Educational Option Type",
+              "targetFieldName": "educational_option_type"
+            },
+            {
+              "sourceFieldName": "NSLP Provision Status",
+              "targetFieldName": "nslp_provision_status"
+            },
+            {
+              "sourceFieldName": "Charter School (Y/N)",
+              "targetFieldName": "charter_school_y_n"
+            },
+            {
+              "sourceFieldName": "Charter School Number",
+              "targetFieldName": "charter_school_number"
+            },
+            {
+              "sourceFieldName": "Charter Funding Type",
+              "targetFieldName": "charter_funding_type"
+            },
+            {
+              "sourceFieldName": "irc",
+              "targetFieldName": "irc"
+            },
+            {
+              "sourceFieldName": "Low Grade",
+              "targetFieldName": "low_grade"
+            },
+            {
+              "sourceFieldName": "High Grade",
+              "targetFieldName": "high_grade"
+            },
+            {
+              "sourceFieldName": "Enrollment (K-12)",
+              "targetFieldName": "enrollment_k_12"
+            },
+            {
+              "sourceFieldName": "Free Meal Count (K-12)",
+              "targetFieldName": "free_meal_count_k_12"
+            },
+            {
+              "sourceFieldName": "Percent (%) Eligible Free (K-12)",
+              "targetFieldName": "percent_eligible_free_k_12"
+            },
+            {
+              "sourceFieldName": "FRPM Count (K-12)",
+              "targetFieldName": "frpm_count_k_12"
+            },
+            {
+              "sourceFieldName": "Percent (%) Eligible FRPM (K-12)",
+              "targetFieldName": "percent_eligible_frpm_k_12"
+            },
+            {
+              "sourceFieldName": "Enrollment (Ages 5-17)",
+              "targetFieldName": "enrollment_ages_5_17"
+            },
+            {
+              "sourceFieldName": "Free Meal Count (Ages 5-17)",
+              "targetFieldName": "free_meal_count_ages_5_17"
+            },
+            {
+              "sourceFieldName": "Percent (%) Eligible Free (Ages 5-17)",
+              "targetFieldName": "percent_eligible_free_ages_5_17"
+            },
+            {
+              "sourceFieldName": "FRPM Count (Ages 5-17)",
+              "targetFieldName": "frpm_count_ages_5_17"
+            },
+            {
+              "sourceFieldName": "Percent (%) Eligible FRPM (Ages 5-17)",
+              "targetFieldName": "percent_eligible_frpm_ages_5_17"
+            },
+            {
+              "sourceFieldName": "2013-14 CALPADS Fall 1 Certification Status",
+              "targetFieldName": "_2013_14_calpads_fall_1_certification_status"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "cdscode",
+          "type": "String"
+        },
+        {
+          "name": "academic_year",
+          "type": "String"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "cdscode",
+          "type": "String"
+        },
+        {
+          "name": "academic_year",
+          "type": "String"
+        },
+        {
+          "name": "county_code",
+          "type": "String"
+        },
+        {
+          "name": "district_code",
+          "type": "Long"
+        },
+        {
+          "name": "school_code",
+          "type": "String"
+        },
+        {
+          "name": "county_name",
+          "type": "String"
+        },
+        {
+          "name": "district_name",
+          "type": "String"
+        },
+        {
+          "name": "school_name",
+          "type": "String"
+        },
+        {
+          "name": "district_type",
+          "type": "String"
+        },
+        {
+          "name": "school_type",
+          "type": "String"
+        },
+        {
+          "name": "educational_option_type",
+          "type": "String"
+        },
+        {
+          "name": "nslp_provision_status",
+          "type": "String"
+        },
+        {
+          "name": "charter_school_y_n",
+          "type": "Long"
+        },
+        {
+          "name": "charter_school_number",
+          "type": "String"
+        },
+        {
+          "name": "charter_funding_type",
+          "type": "String"
+        },
+        {
+          "name": "irc",
+          "type": "Long"
+        },
+        {
+          "name": "low_grade",
+          "type": "String"
+        },
+        {
+          "name": "high_grade",
+          "type": "String"
+        },
+        {
+          "name": "enrollment_k_12",
+          "type": "Float"
+        },
+        {
+          "name": "free_meal_count_k_12",
+          "type": "Float"
+        },
+        {
+          "name": "percent_eligible_free_k_12",
+          "type": "Float"
+        },
+        {
+          "name": "frpm_count_k_12",
+          "type": "Float"
+        },
+        {
+          "name": "percent_eligible_frpm_k_12",
+          "type": "Float"
+        },
+        {
+          "name": "enrollment_ages_5_17",
+          "type": "Float"
+        },
+        {
+          "name": "free_meal_count_ages_5_17",
+          "type": "Float"
+        },
+        {
+          "name": "percent_eligible_free_ages_5_17",
+          "type": "Float"
+        },
+        {
+          "name": "frpm_count_ages_5_17",
+          "type": "Float"
+        },
+        {
+          "name": "percent_eligible_frpm_ages_5_17",
+          "type": "Float"
+        },
+        {
+          "name": "_2013_14_calpads_fall_1_certification_status",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "Satscores",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "california_schools",
+          "table": "satscores",
+          "mappedField": [
+            {
+              "sourceFieldName": "cds",
+              "targetFieldName": "cds"
+            },
+            {
+              "sourceFieldName": "rtype",
+              "targetFieldName": "rtype"
+            },
+            {
+              "sourceFieldName": "sname",
+              "targetFieldName": "sname"
+            },
+            {
+              "sourceFieldName": "dname",
+              "targetFieldName": "dname"
+            },
+            {
+              "sourceFieldName": "cname",
+              "targetFieldName": "cname"
+            },
+            {
+              "sourceFieldName": "enroll12",
+              "targetFieldName": "enroll12"
+            },
+            {
+              "sourceFieldName": "numtsttakr",
+              "targetFieldName": "numtsttakr"
+            },
+            {
+              "sourceFieldName": "avgscrread",
+              "targetFieldName": "avgscrread"
+            },
+            {
+              "sourceFieldName": "avgscrmath",
+              "targetFieldName": "avgscrmath"
+            },
+            {
+              "sourceFieldName": "avgscrwrite",
+              "targetFieldName": "avgscrwrite"
+            },
+            {
+              "sourceFieldName": "numge1500",
+              "targetFieldName": "numge1500"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "cds",
+          "type": "String"
+        },
+        {
+          "name": "rtype",
+          "type": "String"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "cds",
+          "type": "String"
+        },
+        {
+          "name": "rtype",
+          "type": "String"
+        },
+        {
+          "name": "sname",
+          "type": "String"
+        },
+        {
+          "name": "dname",
+          "type": "String"
+        },
+        {
+          "name": "cname",
+          "type": "String"
+        },
+        {
+          "name": "enroll12",
+          "type": "Long"
+        },
+        {
+          "name": "numtsttakr",
+          "type": "Long"
+        },
+        {
+          "name": "avgscrread",
+          "type": "Long"
+        },
+        {
+          "name": "avgscrmath",
+          "type": "Long"
+        },
+        {
+          "name": "avgscrwrite",
+          "type": "Long"
+        },
+        {
+          "name": "numge1500",
+          "type": "Long"
+        }
+      ]
+    }
+  ],
+  "edge": [
+    {
+      "label": "SCHOOL_HAS_MEAL_STATS",
+      "fromNodeLabel": "Schools",
+      "toNodeLabel": "Frpm",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "california_schools",
+          "table": "frpm",
+          "mappedField": [
+            {
+              "sourceFieldName": "cdscode",
+              "targetFieldName": "cdscode"
+            },
+            {
+              "sourceFieldName": "cdscode",
+              "targetFieldName": "meal_cds"
+            },
+            {
+              "sourceFieldName": "Academic Year",
+              "targetFieldName": "academic_year"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "cdscode",
+          "type": "String"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "meal_cds",
+          "type": "String"
+        },
+        {
+          "name": "academic_year",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "SCHOOL_HAS_SAT_SCORE",
+      "fromNodeLabel": "Schools",
+      "toNodeLabel": "Satscores",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "california_schools",
+          "table": "satscores",
+          "mappedField": [
+            {
+              "sourceFieldName": "cds",
+              "targetFieldName": "cds"
+            },
+            {
+              "sourceFieldName": "cds",
+              "targetFieldName": "sat_cds"
+            },
+            {
+              "sourceFieldName": "rtype",
+              "targetFieldName": "rtype"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "cds",
+          "type": "String"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "sat_cds",
+          "type": "String"
+        },
+        {
+          "name": "rtype",
+          "type": "String"
+        }
+      ]
+    }
+  ]
+}

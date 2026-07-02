@@ -1,0 +1,680 @@
+{
+  "catalog": [
+    {
+      "name": "bird_dev_mini",
+      "type": "postgresql",
+      "jdbc": {
+        "username": "root",
+        "password": "123123",
+        "jdbcUri": "jdbc:postgresql://postgres:5432/bird_dev_mini",
+        "enableMetaCache": "true",
+        "metaCacheExpireSec": "600"
+      }
+    }
+  ],
+  "node": [
+    {
+      "label": "Patient",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "thrombosis_prediction",
+          "table": "patient",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "sex",
+              "targetFieldName": "sex"
+            },
+            {
+              "sourceFieldName": "birthday",
+              "targetFieldName": "birthday"
+            },
+            {
+              "sourceFieldName": "description",
+              "targetFieldName": "description"
+            },
+            {
+              "sourceFieldName": "First Date",
+              "targetFieldName": "first_date"
+            },
+            {
+              "sourceFieldName": "admission",
+              "targetFieldName": "admission"
+            },
+            {
+              "sourceFieldName": "diagnosis",
+              "targetFieldName": "diagnosis"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "sex",
+          "type": "String"
+        },
+        {
+          "name": "birthday",
+          "type": "Date"
+        },
+        {
+          "name": "description",
+          "type": "Date"
+        },
+        {
+          "name": "first_date",
+          "type": "Date"
+        },
+        {
+          "name": "admission",
+          "type": "String"
+        },
+        {
+          "name": "diagnosis",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Examination",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "thrombosis_prediction",
+          "table": "examination",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "Examination Date",
+              "targetFieldName": "examination_date"
+            },
+            {
+              "sourceFieldName": "aCL IgG",
+              "targetFieldName": "acl_igg"
+            },
+            {
+              "sourceFieldName": "aCL IgM",
+              "targetFieldName": "acl_igm"
+            },
+            {
+              "sourceFieldName": "ana",
+              "targetFieldName": "ana"
+            },
+            {
+              "sourceFieldName": "ANA Pattern",
+              "targetFieldName": "ana_pattern"
+            },
+            {
+              "sourceFieldName": "aCL IgA",
+              "targetFieldName": "acl_iga"
+            },
+            {
+              "sourceFieldName": "diagnosis",
+              "targetFieldName": "diagnosis"
+            },
+            {
+              "sourceFieldName": "kct",
+              "targetFieldName": "kct"
+            },
+            {
+              "sourceFieldName": "rvvt",
+              "targetFieldName": "rvvt"
+            },
+            {
+              "sourceFieldName": "lac",
+              "targetFieldName": "lac"
+            },
+            {
+              "sourceFieldName": "symptoms",
+              "targetFieldName": "symptoms"
+            },
+            {
+              "sourceFieldName": "thrombosis",
+              "targetFieldName": "thrombosis"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "examination_date",
+          "type": "Date"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "examination_date",
+          "type": "Date"
+        },
+        {
+          "name": "acl_igg",
+          "type": "Float"
+        },
+        {
+          "name": "acl_igm",
+          "type": "Float"
+        },
+        {
+          "name": "ana",
+          "type": "Long"
+        },
+        {
+          "name": "ana_pattern",
+          "type": "String"
+        },
+        {
+          "name": "acl_iga",
+          "type": "Long"
+        },
+        {
+          "name": "diagnosis",
+          "type": "String"
+        },
+        {
+          "name": "kct",
+          "type": "String"
+        },
+        {
+          "name": "rvvt",
+          "type": "String"
+        },
+        {
+          "name": "lac",
+          "type": "String"
+        },
+        {
+          "name": "symptoms",
+          "type": "String"
+        },
+        {
+          "name": "thrombosis",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "Laboratory",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "thrombosis_prediction",
+          "table": "laboratory",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "date",
+              "targetFieldName": "date"
+            },
+            {
+              "sourceFieldName": "got",
+              "targetFieldName": "got"
+            },
+            {
+              "sourceFieldName": "gpt",
+              "targetFieldName": "gpt"
+            },
+            {
+              "sourceFieldName": "ldh",
+              "targetFieldName": "ldh"
+            },
+            {
+              "sourceFieldName": "alp",
+              "targetFieldName": "alp"
+            },
+            {
+              "sourceFieldName": "tp",
+              "targetFieldName": "tp"
+            },
+            {
+              "sourceFieldName": "alb",
+              "targetFieldName": "alb"
+            },
+            {
+              "sourceFieldName": "ua",
+              "targetFieldName": "ua"
+            },
+            {
+              "sourceFieldName": "un",
+              "targetFieldName": "un"
+            },
+            {
+              "sourceFieldName": "cre",
+              "targetFieldName": "cre"
+            },
+            {
+              "sourceFieldName": "T-BIL",
+              "targetFieldName": "t_bil"
+            },
+            {
+              "sourceFieldName": "T-CHO",
+              "targetFieldName": "t_cho"
+            },
+            {
+              "sourceFieldName": "tg",
+              "targetFieldName": "tg"
+            },
+            {
+              "sourceFieldName": "cpk",
+              "targetFieldName": "cpk"
+            },
+            {
+              "sourceFieldName": "glu",
+              "targetFieldName": "glu"
+            },
+            {
+              "sourceFieldName": "wbc",
+              "targetFieldName": "wbc"
+            },
+            {
+              "sourceFieldName": "rbc",
+              "targetFieldName": "rbc"
+            },
+            {
+              "sourceFieldName": "hgb",
+              "targetFieldName": "hgb"
+            },
+            {
+              "sourceFieldName": "hct",
+              "targetFieldName": "hct"
+            },
+            {
+              "sourceFieldName": "plt",
+              "targetFieldName": "plt"
+            },
+            {
+              "sourceFieldName": "pt",
+              "targetFieldName": "pt"
+            },
+            {
+              "sourceFieldName": "aptt",
+              "targetFieldName": "aptt"
+            },
+            {
+              "sourceFieldName": "fg",
+              "targetFieldName": "fg"
+            },
+            {
+              "sourceFieldName": "pic",
+              "targetFieldName": "pic"
+            },
+            {
+              "sourceFieldName": "tat",
+              "targetFieldName": "tat"
+            },
+            {
+              "sourceFieldName": "tat2",
+              "targetFieldName": "tat2"
+            },
+            {
+              "sourceFieldName": "U-PRO",
+              "targetFieldName": "u_pro"
+            },
+            {
+              "sourceFieldName": "igg",
+              "targetFieldName": "igg"
+            },
+            {
+              "sourceFieldName": "iga",
+              "targetFieldName": "iga"
+            },
+            {
+              "sourceFieldName": "igm",
+              "targetFieldName": "igm"
+            },
+            {
+              "sourceFieldName": "crp",
+              "targetFieldName": "crp"
+            },
+            {
+              "sourceFieldName": "ra",
+              "targetFieldName": "ra"
+            },
+            {
+              "sourceFieldName": "rf",
+              "targetFieldName": "rf"
+            },
+            {
+              "sourceFieldName": "c3",
+              "targetFieldName": "c3"
+            },
+            {
+              "sourceFieldName": "c4",
+              "targetFieldName": "c4"
+            },
+            {
+              "sourceFieldName": "rnp",
+              "targetFieldName": "rnp"
+            },
+            {
+              "sourceFieldName": "sm",
+              "targetFieldName": "sm"
+            },
+            {
+              "sourceFieldName": "sc170",
+              "targetFieldName": "sc170"
+            },
+            {
+              "sourceFieldName": "ssa",
+              "targetFieldName": "ssa"
+            },
+            {
+              "sourceFieldName": "ssb",
+              "targetFieldName": "ssb"
+            },
+            {
+              "sourceFieldName": "centromea",
+              "targetFieldName": "centromea"
+            },
+            {
+              "sourceFieldName": "dna",
+              "targetFieldName": "dna"
+            },
+            {
+              "sourceFieldName": "DNA-II",
+              "targetFieldName": "dna_ii"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "date",
+          "type": "Date"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "date",
+          "type": "Date"
+        },
+        {
+          "name": "got",
+          "type": "Long"
+        },
+        {
+          "name": "gpt",
+          "type": "Long"
+        },
+        {
+          "name": "ldh",
+          "type": "Long"
+        },
+        {
+          "name": "alp",
+          "type": "Long"
+        },
+        {
+          "name": "tp",
+          "type": "Float"
+        },
+        {
+          "name": "alb",
+          "type": "Float"
+        },
+        {
+          "name": "ua",
+          "type": "Float"
+        },
+        {
+          "name": "un",
+          "type": "Long"
+        },
+        {
+          "name": "cre",
+          "type": "Float"
+        },
+        {
+          "name": "t_bil",
+          "type": "Float"
+        },
+        {
+          "name": "t_cho",
+          "type": "Long"
+        },
+        {
+          "name": "tg",
+          "type": "Long"
+        },
+        {
+          "name": "cpk",
+          "type": "Long"
+        },
+        {
+          "name": "glu",
+          "type": "Long"
+        },
+        {
+          "name": "wbc",
+          "type": "Float"
+        },
+        {
+          "name": "rbc",
+          "type": "Float"
+        },
+        {
+          "name": "hgb",
+          "type": "Float"
+        },
+        {
+          "name": "hct",
+          "type": "Float"
+        },
+        {
+          "name": "plt",
+          "type": "Long"
+        },
+        {
+          "name": "pt",
+          "type": "Float"
+        },
+        {
+          "name": "aptt",
+          "type": "Long"
+        },
+        {
+          "name": "fg",
+          "type": "Float"
+        },
+        {
+          "name": "pic",
+          "type": "Long"
+        },
+        {
+          "name": "tat",
+          "type": "Long"
+        },
+        {
+          "name": "tat2",
+          "type": "Long"
+        },
+        {
+          "name": "u_pro",
+          "type": "String"
+        },
+        {
+          "name": "igg",
+          "type": "Long"
+        },
+        {
+          "name": "iga",
+          "type": "Long"
+        },
+        {
+          "name": "igm",
+          "type": "Long"
+        },
+        {
+          "name": "crp",
+          "type": "String"
+        },
+        {
+          "name": "ra",
+          "type": "String"
+        },
+        {
+          "name": "rf",
+          "type": "String"
+        },
+        {
+          "name": "c3",
+          "type": "Long"
+        },
+        {
+          "name": "c4",
+          "type": "Long"
+        },
+        {
+          "name": "rnp",
+          "type": "String"
+        },
+        {
+          "name": "sm",
+          "type": "String"
+        },
+        {
+          "name": "sc170",
+          "type": "String"
+        },
+        {
+          "name": "ssa",
+          "type": "String"
+        },
+        {
+          "name": "ssb",
+          "type": "String"
+        },
+        {
+          "name": "centromea",
+          "type": "String"
+        },
+        {
+          "name": "dna",
+          "type": "String"
+        },
+        {
+          "name": "dna_ii",
+          "type": "Long"
+        }
+      ]
+    }
+  ],
+  "edge": [
+    {
+      "label": "HAD_EXAMINATION",
+      "fromNodeLabel": "Patient",
+      "toNodeLabel": "Examination",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "thrombosis_prediction",
+          "table": "examination",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "Examination Date",
+              "targetFieldName": "examination_date"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "examination_date",
+          "type": "Date"
+        }
+      ]
+    },
+    {
+      "label": "HAD_LAB_PANEL",
+      "fromNodeLabel": "Patient",
+      "toNodeLabel": "Laboratory",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "thrombosis_prediction",
+          "table": "laboratory",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "date",
+              "targetFieldName": "date"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "date",
+          "type": "Date"
+        }
+      ]
+    }
+  ]
+}

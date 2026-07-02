@@ -1,0 +1,810 @@
+{
+  "catalog": [
+    {
+      "name": "bird_dev_mini",
+      "type": "postgresql",
+      "jdbc": {
+        "username": "root",
+        "password": "123123",
+        "jdbcUri": "jdbc:postgresql://postgres:5432/bird_dev_mini",
+        "enableMetaCache": "true",
+        "metaCacheExpireSec": "600"
+      }
+    }
+  ],
+  "node": [
+    {
+      "label": "Alignment",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "superhero",
+          "table": "alignment",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "alignment",
+              "targetFieldName": "alignment"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "alignment",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Attribute",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "superhero",
+          "table": "attribute",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "attribute_name",
+              "targetFieldName": "attribute_name"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "attribute_name",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Colour",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "superhero",
+          "table": "colour",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "colour",
+              "targetFieldName": "colour"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "colour",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Gender",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "superhero",
+          "table": "gender",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "gender",
+              "targetFieldName": "gender"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "gender",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Publisher",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "superhero",
+          "table": "publisher",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "publisher_name",
+              "targetFieldName": "publisher_name"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "publisher_name",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Race",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "superhero",
+          "table": "race",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "race",
+              "targetFieldName": "race"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "race",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Superpower",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "superhero",
+          "table": "superpower",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "power_name",
+              "targetFieldName": "power_name"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "power_name",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Superhero",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "superhero",
+          "table": "superhero",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "superhero_name",
+              "targetFieldName": "superhero_name"
+            },
+            {
+              "sourceFieldName": "full_name",
+              "targetFieldName": "full_name"
+            },
+            {
+              "sourceFieldName": "gender_id",
+              "targetFieldName": "gender_id"
+            },
+            {
+              "sourceFieldName": "eye_colour_id",
+              "targetFieldName": "eye_colour_id"
+            },
+            {
+              "sourceFieldName": "hair_colour_id",
+              "targetFieldName": "hair_colour_id"
+            },
+            {
+              "sourceFieldName": "skin_colour_id",
+              "targetFieldName": "skin_colour_id"
+            },
+            {
+              "sourceFieldName": "race_id",
+              "targetFieldName": "race_id"
+            },
+            {
+              "sourceFieldName": "publisher_id",
+              "targetFieldName": "publisher_id"
+            },
+            {
+              "sourceFieldName": "alignment_id",
+              "targetFieldName": "alignment_id"
+            },
+            {
+              "sourceFieldName": "height_cm",
+              "targetFieldName": "height_cm"
+            },
+            {
+              "sourceFieldName": "weight_kg",
+              "targetFieldName": "weight_kg"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "superhero_name",
+          "type": "String"
+        },
+        {
+          "name": "full_name",
+          "type": "String"
+        },
+        {
+          "name": "gender_id",
+          "type": "Long"
+        },
+        {
+          "name": "eye_colour_id",
+          "type": "Long"
+        },
+        {
+          "name": "hair_colour_id",
+          "type": "Long"
+        },
+        {
+          "name": "skin_colour_id",
+          "type": "Long"
+        },
+        {
+          "name": "race_id",
+          "type": "Long"
+        },
+        {
+          "name": "publisher_id",
+          "type": "Long"
+        },
+        {
+          "name": "alignment_id",
+          "type": "Long"
+        },
+        {
+          "name": "height_cm",
+          "type": "Long"
+        },
+        {
+          "name": "weight_kg",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "HeroAttribute",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "superhero",
+          "table": "hero_attribute",
+          "mappedField": [
+            {
+              "sourceFieldName": "hero_id",
+              "targetFieldName": "hero_id"
+            },
+            {
+              "sourceFieldName": "attribute_id",
+              "targetFieldName": "attribute_id"
+            },
+            {
+              "sourceFieldName": "attribute_value",
+              "targetFieldName": "attribute_value"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "hero_id",
+          "type": "Long"
+        },
+        {
+          "name": "attribute_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "hero_id",
+          "type": "Long"
+        },
+        {
+          "name": "attribute_id",
+          "type": "Long"
+        },
+        {
+          "name": "attribute_value",
+          "type": "Long"
+        }
+      ]
+    }
+  ],
+  "edge": [
+    {
+      "label": "HERO_HAS_GENDER",
+      "fromNodeLabel": "Superhero",
+      "toNodeLabel": "Gender",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "superhero",
+          "table": "superhero",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "gender_id",
+              "targetFieldName": "gender_id"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "gender_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "HERO_HAS_EYE_COLOUR",
+      "fromNodeLabel": "Superhero",
+      "toNodeLabel": "Colour",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "superhero",
+          "table": "superhero",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "eye_colour_id",
+              "targetFieldName": "eye_colour_id"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "eye_colour_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "HERO_HAS_HAIR_COLOUR",
+      "fromNodeLabel": "Superhero",
+      "toNodeLabel": "Colour",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "superhero",
+          "table": "superhero",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "hair_colour_id",
+              "targetFieldName": "hair_colour_id"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "hair_colour_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "HERO_HAS_SKIN_COLOUR",
+      "fromNodeLabel": "Superhero",
+      "toNodeLabel": "Colour",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "superhero",
+          "table": "superhero",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "skin_colour_id",
+              "targetFieldName": "skin_colour_id"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "skin_colour_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "HERO_HAS_RACE",
+      "fromNodeLabel": "Superhero",
+      "toNodeLabel": "Race",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "superhero",
+          "table": "superhero",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "race_id",
+              "targetFieldName": "race_id"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "race_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "HERO_HAS_PUBLISHER",
+      "fromNodeLabel": "Superhero",
+      "toNodeLabel": "Publisher",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "superhero",
+          "table": "superhero",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "publisher_id",
+              "targetFieldName": "publisher_id"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "publisher_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "HERO_HAS_ALIGNMENT",
+      "fromNodeLabel": "Superhero",
+      "toNodeLabel": "Alignment",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "superhero",
+          "table": "superhero",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "alignment_id",
+              "targetFieldName": "alignment_id"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "alignment_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "HERO_ATTRIBUTE_OF_HERO",
+      "fromNodeLabel": "HeroAttribute",
+      "toNodeLabel": "Superhero",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "superhero",
+          "table": "hero_attribute",
+          "mappedField": [
+            {
+              "sourceFieldName": "hero_id",
+              "targetFieldName": "hero_id"
+            },
+            {
+              "sourceFieldName": "attribute_id",
+              "targetFieldName": "attribute_id"
+            },
+            {
+              "sourceFieldName": "hero_id",
+              "targetFieldName": "target_hero_id"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "hero_id",
+          "type": "Long"
+        },
+        {
+          "name": "attribute_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "target_hero_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "HERO_ATTRIBUTE_OF_ATTRIBUTE",
+      "fromNodeLabel": "HeroAttribute",
+      "toNodeLabel": "Attribute",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "superhero",
+          "table": "hero_attribute",
+          "mappedField": [
+            {
+              "sourceFieldName": "hero_id",
+              "targetFieldName": "hero_id"
+            },
+            {
+              "sourceFieldName": "attribute_id",
+              "targetFieldName": "attribute_id"
+            },
+            {
+              "sourceFieldName": "attribute_id",
+              "targetFieldName": "target_attribute_id"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "hero_id",
+          "type": "Long"
+        },
+        {
+          "name": "attribute_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "target_attribute_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "HERO_HAS_POWER",
+      "fromNodeLabel": "Superhero",
+      "toNodeLabel": "Superpower",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "superhero",
+          "table": "hero_power",
+          "mappedField": [
+            {
+              "sourceFieldName": "hero_id",
+              "targetFieldName": "hero_id"
+            },
+            {
+              "sourceFieldName": "power_id",
+              "targetFieldName": "power_id"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "hero_id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "power_id",
+          "type": "Long"
+        }
+      ]
+    }
+  ]
+}

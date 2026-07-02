@@ -1,0 +1,261 @@
+{
+  "catalog": [
+    {
+      "name": "bird_dev_mini",
+      "type": "postgresql",
+      "jdbc": {
+        "username": "root",
+        "password": "123123",
+        "jdbcUri": "jdbc:postgresql://postgres:5432/bird_dev_mini",
+        "enableMetaCache": "true",
+        "metaCacheExpireSec": "600"
+      }
+    }
+  ],
+  "node": [
+    {
+      "label": "Molecule",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "toxicology",
+          "table": "molecule",
+          "mappedField": [
+            {
+              "sourceFieldName": "molecule_id",
+              "targetFieldName": "molecule_id"
+            },
+            {
+              "sourceFieldName": "label",
+              "targetFieldName": "label"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "molecule_id",
+          "type": "String"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "molecule_id",
+          "type": "String"
+        },
+        {
+          "name": "label",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Atom",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "toxicology",
+          "table": "atom",
+          "mappedField": [
+            {
+              "sourceFieldName": "atom_id",
+              "targetFieldName": "atom_id"
+            },
+            {
+              "sourceFieldName": "molecule_id",
+              "targetFieldName": "molecule_id"
+            },
+            {
+              "sourceFieldName": "element",
+              "targetFieldName": "element"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "atom_id",
+          "type": "String"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "atom_id",
+          "type": "String"
+        },
+        {
+          "name": "molecule_id",
+          "type": "String"
+        },
+        {
+          "name": "element",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Bond",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "toxicology",
+          "table": "bond",
+          "mappedField": [
+            {
+              "sourceFieldName": "bond_id",
+              "targetFieldName": "bond_id"
+            },
+            {
+              "sourceFieldName": "molecule_id",
+              "targetFieldName": "molecule_id"
+            },
+            {
+              "sourceFieldName": "bond_type",
+              "targetFieldName": "bond_type"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "bond_id",
+          "type": "String"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "bond_id",
+          "type": "String"
+        },
+        {
+          "name": "molecule_id",
+          "type": "String"
+        },
+        {
+          "name": "bond_type",
+          "type": "String"
+        }
+      ]
+    }
+  ],
+  "edge": [
+    {
+      "label": "ATOM_IN_MOLECULE",
+      "fromNodeLabel": "Atom",
+      "toNodeLabel": "Molecule",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "toxicology",
+          "table": "atom",
+          "mappedField": [
+            {
+              "sourceFieldName": "atom_id",
+              "targetFieldName": "atom_id"
+            },
+            {
+              "sourceFieldName": "molecule_id",
+              "targetFieldName": "molecule_id"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "atom_id",
+          "type": "String"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "molecule_id",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "BOND_IN_MOLECULE",
+      "fromNodeLabel": "Bond",
+      "toNodeLabel": "Molecule",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "toxicology",
+          "table": "bond",
+          "mappedField": [
+            {
+              "sourceFieldName": "bond_id",
+              "targetFieldName": "bond_id"
+            },
+            {
+              "sourceFieldName": "molecule_id",
+              "targetFieldName": "molecule_id"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "bond_id",
+          "type": "String"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "molecule_id",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "BOND_CONNECTS_ATOM",
+      "fromNodeLabel": "Bond",
+      "toNodeLabel": "Atom",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "toxicology",
+          "table": "connected",
+          "mappedField": [
+            {
+              "sourceFieldName": "bond_id",
+              "targetFieldName": "bond_id"
+            },
+            {
+              "sourceFieldName": "atom_id",
+              "targetFieldName": "atom_id"
+            },
+            {
+              "sourceFieldName": "atom_id2",
+              "targetFieldName": "atom_id2"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "bond_id",
+          "type": "String"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "atom_id",
+          "type": "String"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "atom_id2",
+          "type": "String"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,779 @@
+{
+  "catalog": [
+    {
+      "name": "bird_dev_mini",
+      "type": "postgresql",
+      "jdbc": {
+        "username": "root",
+        "password": "123123",
+        "jdbcUri": "jdbc:postgresql://postgres:5432/bird_dev_mini",
+        "enableMetaCache": "true",
+        "metaCacheExpireSec": "600"
+      }
+    }
+  ],
+  "node": [
+    {
+      "label": "Member",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "student_club",
+          "table": "member",
+          "mappedField": [
+            {
+              "sourceFieldName": "member_id",
+              "targetFieldName": "member_id"
+            },
+            {
+              "sourceFieldName": "first_name",
+              "targetFieldName": "first_name"
+            },
+            {
+              "sourceFieldName": "last_name",
+              "targetFieldName": "last_name"
+            },
+            {
+              "sourceFieldName": "email",
+              "targetFieldName": "email"
+            },
+            {
+              "sourceFieldName": "position",
+              "targetFieldName": "position"
+            },
+            {
+              "sourceFieldName": "t_shirt_size",
+              "targetFieldName": "t_shirt_size"
+            },
+            {
+              "sourceFieldName": "phone",
+              "targetFieldName": "phone"
+            },
+            {
+              "sourceFieldName": "zip",
+              "targetFieldName": "zip"
+            },
+            {
+              "sourceFieldName": "link_to_major",
+              "targetFieldName": "link_to_major"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "member_id",
+          "type": "String"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "member_id",
+          "type": "String"
+        },
+        {
+          "name": "first_name",
+          "type": "String"
+        },
+        {
+          "name": "last_name",
+          "type": "String"
+        },
+        {
+          "name": "email",
+          "type": "String"
+        },
+        {
+          "name": "position",
+          "type": "String"
+        },
+        {
+          "name": "t_shirt_size",
+          "type": "String"
+        },
+        {
+          "name": "phone",
+          "type": "String"
+        },
+        {
+          "name": "zip",
+          "type": "Long"
+        },
+        {
+          "name": "link_to_major",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Major",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "student_club",
+          "table": "major",
+          "mappedField": [
+            {
+              "sourceFieldName": "major_id",
+              "targetFieldName": "major_id"
+            },
+            {
+              "sourceFieldName": "major_name",
+              "targetFieldName": "major_name"
+            },
+            {
+              "sourceFieldName": "department",
+              "targetFieldName": "department"
+            },
+            {
+              "sourceFieldName": "college",
+              "targetFieldName": "college"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "major_id",
+          "type": "String"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "major_id",
+          "type": "String"
+        },
+        {
+          "name": "major_name",
+          "type": "String"
+        },
+        {
+          "name": "department",
+          "type": "String"
+        },
+        {
+          "name": "college",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "ZipCode",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "student_club",
+          "table": "zip_code",
+          "mappedField": [
+            {
+              "sourceFieldName": "zip_code",
+              "targetFieldName": "zip_code"
+            },
+            {
+              "sourceFieldName": "type",
+              "targetFieldName": "type"
+            },
+            {
+              "sourceFieldName": "city",
+              "targetFieldName": "city"
+            },
+            {
+              "sourceFieldName": "county",
+              "targetFieldName": "county"
+            },
+            {
+              "sourceFieldName": "state",
+              "targetFieldName": "state"
+            },
+            {
+              "sourceFieldName": "short_state",
+              "targetFieldName": "short_state"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "zip_code",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "zip_code",
+          "type": "Long"
+        },
+        {
+          "name": "type",
+          "type": "String"
+        },
+        {
+          "name": "city",
+          "type": "String"
+        },
+        {
+          "name": "county",
+          "type": "String"
+        },
+        {
+          "name": "state",
+          "type": "String"
+        },
+        {
+          "name": "short_state",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Event",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "student_club",
+          "table": "event",
+          "mappedField": [
+            {
+              "sourceFieldName": "event_id",
+              "targetFieldName": "event_id"
+            },
+            {
+              "sourceFieldName": "event_name",
+              "targetFieldName": "event_name"
+            },
+            {
+              "sourceFieldName": "event_date",
+              "targetFieldName": "event_date"
+            },
+            {
+              "sourceFieldName": "type",
+              "targetFieldName": "type"
+            },
+            {
+              "sourceFieldName": "notes",
+              "targetFieldName": "notes"
+            },
+            {
+              "sourceFieldName": "location",
+              "targetFieldName": "location"
+            },
+            {
+              "sourceFieldName": "status",
+              "targetFieldName": "status"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "event_id",
+          "type": "String"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "event_id",
+          "type": "String"
+        },
+        {
+          "name": "event_name",
+          "type": "String"
+        },
+        {
+          "name": "event_date",
+          "type": "String"
+        },
+        {
+          "name": "type",
+          "type": "String"
+        },
+        {
+          "name": "notes",
+          "type": "String"
+        },
+        {
+          "name": "location",
+          "type": "String"
+        },
+        {
+          "name": "status",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Budget",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "student_club",
+          "table": "budget",
+          "mappedField": [
+            {
+              "sourceFieldName": "budget_id",
+              "targetFieldName": "budget_id"
+            },
+            {
+              "sourceFieldName": "category",
+              "targetFieldName": "category"
+            },
+            {
+              "sourceFieldName": "spent",
+              "targetFieldName": "spent"
+            },
+            {
+              "sourceFieldName": "remaining",
+              "targetFieldName": "remaining"
+            },
+            {
+              "sourceFieldName": "amount",
+              "targetFieldName": "amount"
+            },
+            {
+              "sourceFieldName": "event_status",
+              "targetFieldName": "event_status"
+            },
+            {
+              "sourceFieldName": "link_to_event",
+              "targetFieldName": "link_to_event"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "budget_id",
+          "type": "String"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "budget_id",
+          "type": "String"
+        },
+        {
+          "name": "category",
+          "type": "String"
+        },
+        {
+          "name": "spent",
+          "type": "Float"
+        },
+        {
+          "name": "remaining",
+          "type": "Float"
+        },
+        {
+          "name": "amount",
+          "type": "Long"
+        },
+        {
+          "name": "event_status",
+          "type": "String"
+        },
+        {
+          "name": "link_to_event",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Expense",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "student_club",
+          "table": "expense",
+          "mappedField": [
+            {
+              "sourceFieldName": "expense_id",
+              "targetFieldName": "expense_id"
+            },
+            {
+              "sourceFieldName": "expense_description",
+              "targetFieldName": "expense_description"
+            },
+            {
+              "sourceFieldName": "expense_date",
+              "targetFieldName": "expense_date"
+            },
+            {
+              "sourceFieldName": "cost",
+              "targetFieldName": "cost"
+            },
+            {
+              "sourceFieldName": "approved",
+              "targetFieldName": "approved"
+            },
+            {
+              "sourceFieldName": "link_to_member",
+              "targetFieldName": "link_to_member"
+            },
+            {
+              "sourceFieldName": "link_to_budget",
+              "targetFieldName": "link_to_budget"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "expense_id",
+          "type": "String"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "expense_id",
+          "type": "String"
+        },
+        {
+          "name": "expense_description",
+          "type": "String"
+        },
+        {
+          "name": "expense_date",
+          "type": "String"
+        },
+        {
+          "name": "cost",
+          "type": "Float"
+        },
+        {
+          "name": "approved",
+          "type": "String"
+        },
+        {
+          "name": "link_to_member",
+          "type": "String"
+        },
+        {
+          "name": "link_to_budget",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Income",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "student_club",
+          "table": "income",
+          "mappedField": [
+            {
+              "sourceFieldName": "income_id",
+              "targetFieldName": "income_id"
+            },
+            {
+              "sourceFieldName": "date_received",
+              "targetFieldName": "date_received"
+            },
+            {
+              "sourceFieldName": "amount",
+              "targetFieldName": "amount"
+            },
+            {
+              "sourceFieldName": "source",
+              "targetFieldName": "source"
+            },
+            {
+              "sourceFieldName": "notes",
+              "targetFieldName": "notes"
+            },
+            {
+              "sourceFieldName": "link_to_member",
+              "targetFieldName": "link_to_member"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "income_id",
+          "type": "String"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "income_id",
+          "type": "String"
+        },
+        {
+          "name": "date_received",
+          "type": "String"
+        },
+        {
+          "name": "amount",
+          "type": "Long"
+        },
+        {
+          "name": "source",
+          "type": "String"
+        },
+        {
+          "name": "notes",
+          "type": "String"
+        },
+        {
+          "name": "link_to_member",
+          "type": "String"
+        }
+      ]
+    }
+  ],
+  "edge": [
+    {
+      "label": "MEMBER_STUDIES_MAJOR",
+      "fromNodeLabel": "Member",
+      "toNodeLabel": "Major",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "student_club",
+          "table": "member",
+          "mappedField": [
+            {
+              "sourceFieldName": "member_id",
+              "targetFieldName": "member_id"
+            },
+            {
+              "sourceFieldName": "link_to_major",
+              "targetFieldName": "link_to_major"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "member_id",
+          "type": "String"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "link_to_major",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "MEMBER_LIVES_IN_ZIP",
+      "fromNodeLabel": "Member",
+      "toNodeLabel": "ZipCode",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "student_club",
+          "table": "member",
+          "mappedField": [
+            {
+              "sourceFieldName": "member_id",
+              "targetFieldName": "member_id"
+            },
+            {
+              "sourceFieldName": "zip",
+              "targetFieldName": "zip"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "member_id",
+          "type": "String"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "zip",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "MEMBER_ATTENDED_EVENT",
+      "fromNodeLabel": "Member",
+      "toNodeLabel": "Event",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "student_club",
+          "table": "attendance",
+          "mappedField": [
+            {
+              "sourceFieldName": "link_to_member",
+              "targetFieldName": "link_to_member"
+            },
+            {
+              "sourceFieldName": "link_to_event",
+              "targetFieldName": "link_to_event"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "link_to_member",
+          "type": "String"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "link_to_event",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "BUDGET_FOR_EVENT",
+      "fromNodeLabel": "Budget",
+      "toNodeLabel": "Event",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "student_club",
+          "table": "budget",
+          "mappedField": [
+            {
+              "sourceFieldName": "budget_id",
+              "targetFieldName": "budget_id"
+            },
+            {
+              "sourceFieldName": "link_to_event",
+              "targetFieldName": "link_to_event"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "budget_id",
+          "type": "String"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "link_to_event",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "EXPENSE_BY_MEMBER",
+      "fromNodeLabel": "Expense",
+      "toNodeLabel": "Member",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "student_club",
+          "table": "expense",
+          "mappedField": [
+            {
+              "sourceFieldName": "expense_id",
+              "targetFieldName": "expense_id"
+            },
+            {
+              "sourceFieldName": "link_to_member",
+              "targetFieldName": "link_to_member"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "expense_id",
+          "type": "String"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "link_to_member",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "EXPENSE_AGAINST_BUDGET",
+      "fromNodeLabel": "Expense",
+      "toNodeLabel": "Budget",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "student_club",
+          "table": "expense",
+          "mappedField": [
+            {
+              "sourceFieldName": "expense_id",
+              "targetFieldName": "expense_id"
+            },
+            {
+              "sourceFieldName": "link_to_budget",
+              "targetFieldName": "link_to_budget"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "expense_id",
+          "type": "String"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "link_to_budget",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "INCOME_FROM_MEMBER",
+      "fromNodeLabel": "Income",
+      "toNodeLabel": "Member",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "student_club",
+          "table": "income",
+          "mappedField": [
+            {
+              "sourceFieldName": "income_id",
+              "targetFieldName": "income_id"
+            },
+            {
+              "sourceFieldName": "link_to_member",
+              "targetFieldName": "link_to_member"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "income_id",
+          "type": "String"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "link_to_member",
+          "type": "String"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1171 @@
+{
+  "catalog": [
+    {
+      "name": "bird_dev_mini",
+      "type": "postgresql",
+      "jdbc": {
+        "username": "root",
+        "password": "123123",
+        "jdbcUri": "jdbc:postgresql://postgres:5432/bird_dev_mini",
+        "enableMetaCache": "true",
+        "metaCacheExpireSec": "600"
+      }
+    }
+  ],
+  "node": [
+    {
+      "label": "Country",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "european_football_2",
+          "table": "country",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "name",
+              "targetFieldName": "name"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "League",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "european_football_2",
+          "table": "league",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "country_id",
+              "targetFieldName": "country_id"
+            },
+            {
+              "sourceFieldName": "name",
+              "targetFieldName": "name"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "country_id",
+          "type": "Long"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Team",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "european_football_2",
+          "table": "team",
+          "mappedField": [
+            {
+              "sourceFieldName": "team_api_id",
+              "targetFieldName": "team_api_id"
+            },
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "team_fifa_api_id",
+              "targetFieldName": "team_fifa_api_id"
+            },
+            {
+              "sourceFieldName": "team_long_name",
+              "targetFieldName": "team_long_name"
+            },
+            {
+              "sourceFieldName": "team_short_name",
+              "targetFieldName": "team_short_name"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "team_api_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "team_api_id",
+          "type": "Long"
+        },
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "team_fifa_api_id",
+          "type": "Long"
+        },
+        {
+          "name": "team_long_name",
+          "type": "String"
+        },
+        {
+          "name": "team_short_name",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "TeamAttributes",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "european_football_2",
+          "table": "team_attributes",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "team_api_id",
+              "targetFieldName": "team_api_id"
+            },
+            {
+              "sourceFieldName": "team_fifa_api_id",
+              "targetFieldName": "team_fifa_api_id"
+            },
+            {
+              "sourceFieldName": "date",
+              "targetFieldName": "date"
+            },
+            {
+              "sourceFieldName": "buildupplayspeed",
+              "targetFieldName": "buildupplayspeed"
+            },
+            {
+              "sourceFieldName": "buildupplayspeedclass",
+              "targetFieldName": "buildupplayspeedclass"
+            },
+            {
+              "sourceFieldName": "buildupplaydribbling",
+              "targetFieldName": "buildupplaydribbling"
+            },
+            {
+              "sourceFieldName": "buildupplaydribblingclass",
+              "targetFieldName": "buildupplaydribblingclass"
+            },
+            {
+              "sourceFieldName": "buildupplaypassing",
+              "targetFieldName": "buildupplaypassing"
+            },
+            {
+              "sourceFieldName": "buildupplaypassingclass",
+              "targetFieldName": "buildupplaypassingclass"
+            },
+            {
+              "sourceFieldName": "buildupplaypositioningclass",
+              "targetFieldName": "buildupplaypositioningclass"
+            },
+            {
+              "sourceFieldName": "chancecreationpassing",
+              "targetFieldName": "chancecreationpassing"
+            },
+            {
+              "sourceFieldName": "chancecreationpassingclass",
+              "targetFieldName": "chancecreationpassingclass"
+            },
+            {
+              "sourceFieldName": "chancecreationcrossing",
+              "targetFieldName": "chancecreationcrossing"
+            },
+            {
+              "sourceFieldName": "chancecreationcrossingclass",
+              "targetFieldName": "chancecreationcrossingclass"
+            },
+            {
+              "sourceFieldName": "chancecreationshooting",
+              "targetFieldName": "chancecreationshooting"
+            },
+            {
+              "sourceFieldName": "chancecreationshootingclass",
+              "targetFieldName": "chancecreationshootingclass"
+            },
+            {
+              "sourceFieldName": "chancecreationpositioningclass",
+              "targetFieldName": "chancecreationpositioningclass"
+            },
+            {
+              "sourceFieldName": "defencepressure",
+              "targetFieldName": "defencepressure"
+            },
+            {
+              "sourceFieldName": "defencepressureclass",
+              "targetFieldName": "defencepressureclass"
+            },
+            {
+              "sourceFieldName": "defenceaggression",
+              "targetFieldName": "defenceaggression"
+            },
+            {
+              "sourceFieldName": "defenceaggressionclass",
+              "targetFieldName": "defenceaggressionclass"
+            },
+            {
+              "sourceFieldName": "defenceteamwidth",
+              "targetFieldName": "defenceteamwidth"
+            },
+            {
+              "sourceFieldName": "defenceteamwidthclass",
+              "targetFieldName": "defenceteamwidthclass"
+            },
+            {
+              "sourceFieldName": "defencedefenderlineclass",
+              "targetFieldName": "defencedefenderlineclass"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "team_api_id",
+          "type": "Long"
+        },
+        {
+          "name": "team_fifa_api_id",
+          "type": "Long"
+        },
+        {
+          "name": "date",
+          "type": "String"
+        },
+        {
+          "name": "buildupplayspeed",
+          "type": "Long"
+        },
+        {
+          "name": "buildupplayspeedclass",
+          "type": "String"
+        },
+        {
+          "name": "buildupplaydribbling",
+          "type": "Long"
+        },
+        {
+          "name": "buildupplaydribblingclass",
+          "type": "String"
+        },
+        {
+          "name": "buildupplaypassing",
+          "type": "Long"
+        },
+        {
+          "name": "buildupplaypassingclass",
+          "type": "String"
+        },
+        {
+          "name": "buildupplaypositioningclass",
+          "type": "String"
+        },
+        {
+          "name": "chancecreationpassing",
+          "type": "Long"
+        },
+        {
+          "name": "chancecreationpassingclass",
+          "type": "String"
+        },
+        {
+          "name": "chancecreationcrossing",
+          "type": "Long"
+        },
+        {
+          "name": "chancecreationcrossingclass",
+          "type": "String"
+        },
+        {
+          "name": "chancecreationshooting",
+          "type": "Long"
+        },
+        {
+          "name": "chancecreationshootingclass",
+          "type": "String"
+        },
+        {
+          "name": "chancecreationpositioningclass",
+          "type": "String"
+        },
+        {
+          "name": "defencepressure",
+          "type": "Long"
+        },
+        {
+          "name": "defencepressureclass",
+          "type": "String"
+        },
+        {
+          "name": "defenceaggression",
+          "type": "Long"
+        },
+        {
+          "name": "defenceaggressionclass",
+          "type": "String"
+        },
+        {
+          "name": "defenceteamwidth",
+          "type": "Long"
+        },
+        {
+          "name": "defenceteamwidthclass",
+          "type": "String"
+        },
+        {
+          "name": "defencedefenderlineclass",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Player",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "european_football_2",
+          "table": "player",
+          "mappedField": [
+            {
+              "sourceFieldName": "player_api_id",
+              "targetFieldName": "player_api_id"
+            },
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "player_name",
+              "targetFieldName": "player_name"
+            },
+            {
+              "sourceFieldName": "player_fifa_api_id",
+              "targetFieldName": "player_fifa_api_id"
+            },
+            {
+              "sourceFieldName": "birthday",
+              "targetFieldName": "birthday"
+            },
+            {
+              "sourceFieldName": "height",
+              "targetFieldName": "height"
+            },
+            {
+              "sourceFieldName": "weight",
+              "targetFieldName": "weight"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "player_api_id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "player_api_id",
+          "type": "Long"
+        },
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "player_name",
+          "type": "String"
+        },
+        {
+          "name": "player_fifa_api_id",
+          "type": "Long"
+        },
+        {
+          "name": "birthday",
+          "type": "String"
+        },
+        {
+          "name": "height",
+          "type": "Long"
+        },
+        {
+          "name": "weight",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "PlayerAttributes",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "european_football_2",
+          "table": "player_attributes",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "player_api_id",
+              "targetFieldName": "player_api_id"
+            },
+            {
+              "sourceFieldName": "player_fifa_api_id",
+              "targetFieldName": "player_fifa_api_id"
+            },
+            {
+              "sourceFieldName": "date",
+              "targetFieldName": "date"
+            },
+            {
+              "sourceFieldName": "overall_rating",
+              "targetFieldName": "overall_rating"
+            },
+            {
+              "sourceFieldName": "potential",
+              "targetFieldName": "potential"
+            },
+            {
+              "sourceFieldName": "preferred_foot",
+              "targetFieldName": "preferred_foot"
+            },
+            {
+              "sourceFieldName": "attacking_work_rate",
+              "targetFieldName": "attacking_work_rate"
+            },
+            {
+              "sourceFieldName": "defensive_work_rate",
+              "targetFieldName": "defensive_work_rate"
+            },
+            {
+              "sourceFieldName": "crossing",
+              "targetFieldName": "crossing"
+            },
+            {
+              "sourceFieldName": "finishing",
+              "targetFieldName": "finishing"
+            },
+            {
+              "sourceFieldName": "heading_accuracy",
+              "targetFieldName": "heading_accuracy"
+            },
+            {
+              "sourceFieldName": "short_passing",
+              "targetFieldName": "short_passing"
+            },
+            {
+              "sourceFieldName": "volleys",
+              "targetFieldName": "volleys"
+            },
+            {
+              "sourceFieldName": "dribbling",
+              "targetFieldName": "dribbling"
+            },
+            {
+              "sourceFieldName": "curve",
+              "targetFieldName": "curve"
+            },
+            {
+              "sourceFieldName": "free_kick_accuracy",
+              "targetFieldName": "free_kick_accuracy"
+            },
+            {
+              "sourceFieldName": "long_passing",
+              "targetFieldName": "long_passing"
+            },
+            {
+              "sourceFieldName": "ball_control",
+              "targetFieldName": "ball_control"
+            },
+            {
+              "sourceFieldName": "acceleration",
+              "targetFieldName": "acceleration"
+            },
+            {
+              "sourceFieldName": "sprint_speed",
+              "targetFieldName": "sprint_speed"
+            },
+            {
+              "sourceFieldName": "agility",
+              "targetFieldName": "agility"
+            },
+            {
+              "sourceFieldName": "reactions",
+              "targetFieldName": "reactions"
+            },
+            {
+              "sourceFieldName": "balance",
+              "targetFieldName": "balance"
+            },
+            {
+              "sourceFieldName": "shot_power",
+              "targetFieldName": "shot_power"
+            },
+            {
+              "sourceFieldName": "jumping",
+              "targetFieldName": "jumping"
+            },
+            {
+              "sourceFieldName": "stamina",
+              "targetFieldName": "stamina"
+            },
+            {
+              "sourceFieldName": "strength",
+              "targetFieldName": "strength"
+            },
+            {
+              "sourceFieldName": "long_shots",
+              "targetFieldName": "long_shots"
+            },
+            {
+              "sourceFieldName": "aggression",
+              "targetFieldName": "aggression"
+            },
+            {
+              "sourceFieldName": "interceptions",
+              "targetFieldName": "interceptions"
+            },
+            {
+              "sourceFieldName": "positioning",
+              "targetFieldName": "positioning"
+            },
+            {
+              "sourceFieldName": "vision",
+              "targetFieldName": "vision"
+            },
+            {
+              "sourceFieldName": "penalties",
+              "targetFieldName": "penalties"
+            },
+            {
+              "sourceFieldName": "marking",
+              "targetFieldName": "marking"
+            },
+            {
+              "sourceFieldName": "standing_tackle",
+              "targetFieldName": "standing_tackle"
+            },
+            {
+              "sourceFieldName": "sliding_tackle",
+              "targetFieldName": "sliding_tackle"
+            },
+            {
+              "sourceFieldName": "gk_diving",
+              "targetFieldName": "gk_diving"
+            },
+            {
+              "sourceFieldName": "gk_handling",
+              "targetFieldName": "gk_handling"
+            },
+            {
+              "sourceFieldName": "gk_kicking",
+              "targetFieldName": "gk_kicking"
+            },
+            {
+              "sourceFieldName": "gk_positioning",
+              "targetFieldName": "gk_positioning"
+            },
+            {
+              "sourceFieldName": "gk_reflexes",
+              "targetFieldName": "gk_reflexes"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "player_api_id",
+          "type": "Long"
+        },
+        {
+          "name": "player_fifa_api_id",
+          "type": "Long"
+        },
+        {
+          "name": "date",
+          "type": "String"
+        },
+        {
+          "name": "overall_rating",
+          "type": "Long"
+        },
+        {
+          "name": "potential",
+          "type": "Long"
+        },
+        {
+          "name": "preferred_foot",
+          "type": "String"
+        },
+        {
+          "name": "attacking_work_rate",
+          "type": "String"
+        },
+        {
+          "name": "defensive_work_rate",
+          "type": "String"
+        },
+        {
+          "name": "crossing",
+          "type": "Long"
+        },
+        {
+          "name": "finishing",
+          "type": "Long"
+        },
+        {
+          "name": "heading_accuracy",
+          "type": "Long"
+        },
+        {
+          "name": "short_passing",
+          "type": "Long"
+        },
+        {
+          "name": "volleys",
+          "type": "Long"
+        },
+        {
+          "name": "dribbling",
+          "type": "Long"
+        },
+        {
+          "name": "curve",
+          "type": "Long"
+        },
+        {
+          "name": "free_kick_accuracy",
+          "type": "Long"
+        },
+        {
+          "name": "long_passing",
+          "type": "Long"
+        },
+        {
+          "name": "ball_control",
+          "type": "Long"
+        },
+        {
+          "name": "acceleration",
+          "type": "Long"
+        },
+        {
+          "name": "sprint_speed",
+          "type": "Long"
+        },
+        {
+          "name": "agility",
+          "type": "Long"
+        },
+        {
+          "name": "reactions",
+          "type": "Long"
+        },
+        {
+          "name": "balance",
+          "type": "Long"
+        },
+        {
+          "name": "shot_power",
+          "type": "Long"
+        },
+        {
+          "name": "jumping",
+          "type": "Long"
+        },
+        {
+          "name": "stamina",
+          "type": "Long"
+        },
+        {
+          "name": "strength",
+          "type": "Long"
+        },
+        {
+          "name": "long_shots",
+          "type": "Long"
+        },
+        {
+          "name": "aggression",
+          "type": "Long"
+        },
+        {
+          "name": "interceptions",
+          "type": "Long"
+        },
+        {
+          "name": "positioning",
+          "type": "Long"
+        },
+        {
+          "name": "vision",
+          "type": "Long"
+        },
+        {
+          "name": "penalties",
+          "type": "Long"
+        },
+        {
+          "name": "marking",
+          "type": "Long"
+        },
+        {
+          "name": "standing_tackle",
+          "type": "Long"
+        },
+        {
+          "name": "sliding_tackle",
+          "type": "Long"
+        },
+        {
+          "name": "gk_diving",
+          "type": "Long"
+        },
+        {
+          "name": "gk_handling",
+          "type": "Long"
+        },
+        {
+          "name": "gk_kicking",
+          "type": "Long"
+        },
+        {
+          "name": "gk_positioning",
+          "type": "Long"
+        },
+        {
+          "name": "gk_reflexes",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "Match",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "european_football_2",
+          "table": "match",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "match_api_id",
+              "targetFieldName": "match_api_id"
+            },
+            {
+              "sourceFieldName": "country_id",
+              "targetFieldName": "country_id"
+            },
+            {
+              "sourceFieldName": "league_id",
+              "targetFieldName": "league_id"
+            },
+            {
+              "sourceFieldName": "season",
+              "targetFieldName": "season"
+            },
+            {
+              "sourceFieldName": "stage",
+              "targetFieldName": "stage"
+            },
+            {
+              "sourceFieldName": "date",
+              "targetFieldName": "date"
+            },
+            {
+              "sourceFieldName": "home_team_api_id",
+              "targetFieldName": "home_team_api_id"
+            },
+            {
+              "sourceFieldName": "away_team_api_id",
+              "targetFieldName": "away_team_api_id"
+            },
+            {
+              "sourceFieldName": "home_team_goal",
+              "targetFieldName": "home_team_goal"
+            },
+            {
+              "sourceFieldName": "away_team_goal",
+              "targetFieldName": "away_team_goal"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "match_api_id",
+          "type": "Long"
+        },
+        {
+          "name": "country_id",
+          "type": "Long"
+        },
+        {
+          "name": "league_id",
+          "type": "Long"
+        },
+        {
+          "name": "season",
+          "type": "String"
+        },
+        {
+          "name": "stage",
+          "type": "Long"
+        },
+        {
+          "name": "date",
+          "type": "String"
+        },
+        {
+          "name": "home_team_api_id",
+          "type": "Long"
+        },
+        {
+          "name": "away_team_api_id",
+          "type": "Long"
+        },
+        {
+          "name": "home_team_goal",
+          "type": "Long"
+        },
+        {
+          "name": "away_team_goal",
+          "type": "Long"
+        }
+      ]
+    }
+  ],
+  "edge": [
+    {
+      "label": "LEAGUE_IN_COUNTRY",
+      "fromNodeLabel": "League",
+      "toNodeLabel": "Country",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "european_football_2",
+          "table": "league",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "country_id",
+              "targetFieldName": "country_id"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "country_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "TEAM_ATTRIBUTES_OF_TEAM",
+      "fromNodeLabel": "TeamAttributes",
+      "toNodeLabel": "Team",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "european_football_2",
+          "table": "team_attributes",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "team_api_id",
+              "targetFieldName": "team_api_id"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "team_api_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "PLAYER_ATTRIBUTES_OF_PLAYER",
+      "fromNodeLabel": "PlayerAttributes",
+      "toNodeLabel": "Player",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "european_football_2",
+          "table": "player_attributes",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "player_api_id",
+              "targetFieldName": "player_api_id"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "player_api_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "MATCH_IN_COUNTRY",
+      "fromNodeLabel": "Match",
+      "toNodeLabel": "Country",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "european_football_2",
+          "table": "match",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "country_id",
+              "targetFieldName": "country_id"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "country_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "MATCH_IN_LEAGUE",
+      "fromNodeLabel": "Match",
+      "toNodeLabel": "League",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "european_football_2",
+          "table": "match",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "league_id",
+              "targetFieldName": "league_id"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "league_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "MATCH_HOME_TEAM",
+      "fromNodeLabel": "Match",
+      "toNodeLabel": "Team",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "european_football_2",
+          "table": "match",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "home_team_api_id",
+              "targetFieldName": "home_team_api_id"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "home_team_api_id",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "MATCH_AWAY_TEAM",
+      "fromNodeLabel": "Match",
+      "toNodeLabel": "Team",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "european_football_2",
+          "table": "match",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "away_team_api_id",
+              "targetFieldName": "away_team_api_id"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "away_team_api_id",
+          "type": "Long"
+        }
+      ]
+    }
+  ]
+}

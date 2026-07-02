@@ -1,0 +1,1280 @@
+{
+  "catalog": [
+    {
+      "name": "bird_dev_mini",
+      "type": "postgresql",
+      "jdbc": {
+        "username": "root",
+        "password": "123123",
+        "jdbcUri": "jdbc:postgresql://postgres:5432/bird_dev_mini",
+        "enableMetaCache": "true",
+        "metaCacheExpireSec": "600"
+      }
+    }
+  ],
+  "node": [
+    {
+      "label": "Users",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "users",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "reputation",
+              "targetFieldName": "reputation"
+            },
+            {
+              "sourceFieldName": "creationdate",
+              "targetFieldName": "creationdate"
+            },
+            {
+              "sourceFieldName": "displayname",
+              "targetFieldName": "displayname"
+            },
+            {
+              "sourceFieldName": "lastaccessdate",
+              "targetFieldName": "lastaccessdate"
+            },
+            {
+              "sourceFieldName": "websiteurl",
+              "targetFieldName": "websiteurl"
+            },
+            {
+              "sourceFieldName": "location",
+              "targetFieldName": "location"
+            },
+            {
+              "sourceFieldName": "aboutme",
+              "targetFieldName": "aboutme"
+            },
+            {
+              "sourceFieldName": "views",
+              "targetFieldName": "views"
+            },
+            {
+              "sourceFieldName": "upvotes",
+              "targetFieldName": "upvotes"
+            },
+            {
+              "sourceFieldName": "downvotes",
+              "targetFieldName": "downvotes"
+            },
+            {
+              "sourceFieldName": "accountid",
+              "targetFieldName": "accountid"
+            },
+            {
+              "sourceFieldName": "age",
+              "targetFieldName": "age"
+            },
+            {
+              "sourceFieldName": "profileimageurl",
+              "targetFieldName": "profileimageurl"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "reputation",
+          "type": "Long"
+        },
+        {
+          "name": "creationdate",
+          "type": "DateTime"
+        },
+        {
+          "name": "displayname",
+          "type": "String"
+        },
+        {
+          "name": "lastaccessdate",
+          "type": "DateTime"
+        },
+        {
+          "name": "websiteurl",
+          "type": "String"
+        },
+        {
+          "name": "location",
+          "type": "String"
+        },
+        {
+          "name": "aboutme",
+          "type": "String"
+        },
+        {
+          "name": "views",
+          "type": "Long"
+        },
+        {
+          "name": "upvotes",
+          "type": "Long"
+        },
+        {
+          "name": "downvotes",
+          "type": "Long"
+        },
+        {
+          "name": "accountid",
+          "type": "Long"
+        },
+        {
+          "name": "age",
+          "type": "Long"
+        },
+        {
+          "name": "profileimageurl",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Posts",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "posts",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "posttypeid",
+              "targetFieldName": "posttypeid"
+            },
+            {
+              "sourceFieldName": "acceptedanswerid",
+              "targetFieldName": "acceptedanswerid"
+            },
+            {
+              "sourceFieldName": "creaiondate",
+              "targetFieldName": "creaiondate"
+            },
+            {
+              "sourceFieldName": "score",
+              "targetFieldName": "score"
+            },
+            {
+              "sourceFieldName": "viewcount",
+              "targetFieldName": "viewcount"
+            },
+            {
+              "sourceFieldName": "body",
+              "targetFieldName": "body"
+            },
+            {
+              "sourceFieldName": "owneruserid",
+              "targetFieldName": "owneruserid"
+            },
+            {
+              "sourceFieldName": "lasactivitydate",
+              "targetFieldName": "lasactivitydate"
+            },
+            {
+              "sourceFieldName": "title",
+              "targetFieldName": "title"
+            },
+            {
+              "sourceFieldName": "tags",
+              "targetFieldName": "tags"
+            },
+            {
+              "sourceFieldName": "answercount",
+              "targetFieldName": "answercount"
+            },
+            {
+              "sourceFieldName": "commentcount",
+              "targetFieldName": "commentcount"
+            },
+            {
+              "sourceFieldName": "favoritecount",
+              "targetFieldName": "favoritecount"
+            },
+            {
+              "sourceFieldName": "lasteditoruserid",
+              "targetFieldName": "lasteditoruserid"
+            },
+            {
+              "sourceFieldName": "lasteditdate",
+              "targetFieldName": "lasteditdate"
+            },
+            {
+              "sourceFieldName": "communityowneddate",
+              "targetFieldName": "communityowneddate"
+            },
+            {
+              "sourceFieldName": "parentid",
+              "targetFieldName": "parentid"
+            },
+            {
+              "sourceFieldName": "closeddate",
+              "targetFieldName": "closeddate"
+            },
+            {
+              "sourceFieldName": "ownerdisplayname",
+              "targetFieldName": "ownerdisplayname"
+            },
+            {
+              "sourceFieldName": "lasteditordisplayname",
+              "targetFieldName": "lasteditordisplayname"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "posttypeid",
+          "type": "Long"
+        },
+        {
+          "name": "acceptedanswerid",
+          "type": "Long"
+        },
+        {
+          "name": "creaiondate",
+          "type": "DateTime"
+        },
+        {
+          "name": "score",
+          "type": "Long"
+        },
+        {
+          "name": "viewcount",
+          "type": "Long"
+        },
+        {
+          "name": "body",
+          "type": "String"
+        },
+        {
+          "name": "owneruserid",
+          "type": "Long"
+        },
+        {
+          "name": "lasactivitydate",
+          "type": "DateTime"
+        },
+        {
+          "name": "title",
+          "type": "String"
+        },
+        {
+          "name": "tags",
+          "type": "String"
+        },
+        {
+          "name": "answercount",
+          "type": "Long"
+        },
+        {
+          "name": "commentcount",
+          "type": "Long"
+        },
+        {
+          "name": "favoritecount",
+          "type": "Long"
+        },
+        {
+          "name": "lasteditoruserid",
+          "type": "Long"
+        },
+        {
+          "name": "lasteditdate",
+          "type": "DateTime"
+        },
+        {
+          "name": "communityowneddate",
+          "type": "DateTime"
+        },
+        {
+          "name": "parentid",
+          "type": "Long"
+        },
+        {
+          "name": "closeddate",
+          "type": "DateTime"
+        },
+        {
+          "name": "ownerdisplayname",
+          "type": "String"
+        },
+        {
+          "name": "lasteditordisplayname",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Comments",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "comments",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "postid",
+              "targetFieldName": "postid"
+            },
+            {
+              "sourceFieldName": "score",
+              "targetFieldName": "score"
+            },
+            {
+              "sourceFieldName": "text",
+              "targetFieldName": "text"
+            },
+            {
+              "sourceFieldName": "creationdate",
+              "targetFieldName": "creationdate"
+            },
+            {
+              "sourceFieldName": "userid",
+              "targetFieldName": "userid"
+            },
+            {
+              "sourceFieldName": "userdisplayname",
+              "targetFieldName": "userdisplayname"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "postid",
+          "type": "Long"
+        },
+        {
+          "name": "score",
+          "type": "Long"
+        },
+        {
+          "name": "text",
+          "type": "String"
+        },
+        {
+          "name": "creationdate",
+          "type": "DateTime"
+        },
+        {
+          "name": "userid",
+          "type": "Long"
+        },
+        {
+          "name": "userdisplayname",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Votes",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "votes",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "postid",
+              "targetFieldName": "postid"
+            },
+            {
+              "sourceFieldName": "votetypeid",
+              "targetFieldName": "votetypeid"
+            },
+            {
+              "sourceFieldName": "creationdate",
+              "targetFieldName": "creationdate"
+            },
+            {
+              "sourceFieldName": "userid",
+              "targetFieldName": "userid"
+            },
+            {
+              "sourceFieldName": "bountyamount",
+              "targetFieldName": "bountyamount"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "postid",
+          "type": "Long"
+        },
+        {
+          "name": "votetypeid",
+          "type": "Long"
+        },
+        {
+          "name": "creationdate",
+          "type": "Date"
+        },
+        {
+          "name": "userid",
+          "type": "Long"
+        },
+        {
+          "name": "bountyamount",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "Badges",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "badges",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "userid",
+              "targetFieldName": "userid"
+            },
+            {
+              "sourceFieldName": "name",
+              "targetFieldName": "name"
+            },
+            {
+              "sourceFieldName": "date",
+              "targetFieldName": "date"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "userid",
+          "type": "Long"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "date",
+          "type": "DateTime"
+        }
+      ]
+    },
+    {
+      "label": "Posthistory",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "posthistory",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "posthistorytypeid",
+              "targetFieldName": "posthistorytypeid"
+            },
+            {
+              "sourceFieldName": "postid",
+              "targetFieldName": "postid"
+            },
+            {
+              "sourceFieldName": "revisionguid",
+              "targetFieldName": "revisionguid"
+            },
+            {
+              "sourceFieldName": "creationdate",
+              "targetFieldName": "creationdate"
+            },
+            {
+              "sourceFieldName": "userid",
+              "targetFieldName": "userid"
+            },
+            {
+              "sourceFieldName": "text",
+              "targetFieldName": "text"
+            },
+            {
+              "sourceFieldName": "comment",
+              "targetFieldName": "comment"
+            },
+            {
+              "sourceFieldName": "userdisplayname",
+              "targetFieldName": "userdisplayname"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "posthistorytypeid",
+          "type": "Long"
+        },
+        {
+          "name": "postid",
+          "type": "Long"
+        },
+        {
+          "name": "revisionguid",
+          "type": "String"
+        },
+        {
+          "name": "creationdate",
+          "type": "DateTime"
+        },
+        {
+          "name": "userid",
+          "type": "Long"
+        },
+        {
+          "name": "text",
+          "type": "String"
+        },
+        {
+          "name": "comment",
+          "type": "String"
+        },
+        {
+          "name": "userdisplayname",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Postlinks",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "postlinks",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "creationdate",
+              "targetFieldName": "creationdate"
+            },
+            {
+              "sourceFieldName": "postid",
+              "targetFieldName": "postid"
+            },
+            {
+              "sourceFieldName": "relatedpostid",
+              "targetFieldName": "relatedpostid"
+            },
+            {
+              "sourceFieldName": "linktypeid",
+              "targetFieldName": "linktypeid"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "creationdate",
+          "type": "DateTime"
+        },
+        {
+          "name": "postid",
+          "type": "Long"
+        },
+        {
+          "name": "relatedpostid",
+          "type": "Long"
+        },
+        {
+          "name": "linktypeid",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "Tags",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "tags",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "tagname",
+              "targetFieldName": "tagname"
+            },
+            {
+              "sourceFieldName": "count",
+              "targetFieldName": "count"
+            },
+            {
+              "sourceFieldName": "excerptpostid",
+              "targetFieldName": "excerptpostid"
+            },
+            {
+              "sourceFieldName": "wikipostid",
+              "targetFieldName": "wikipostid"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "tagname",
+          "type": "String"
+        },
+        {
+          "name": "count",
+          "type": "Long"
+        },
+        {
+          "name": "excerptpostid",
+          "type": "Long"
+        },
+        {
+          "name": "wikipostid",
+          "type": "Long"
+        }
+      ]
+    }
+  ],
+  "edge": [
+    {
+      "label": "POST_OWNED_BY_USER",
+      "fromNodeLabel": "Posts",
+      "toNodeLabel": "Users",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "posts",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "owneruserid",
+              "targetFieldName": "owneruserid"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "owneruserid",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "POST_LAST_EDITED_BY_USER",
+      "fromNodeLabel": "Posts",
+      "toNodeLabel": "Users",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "posts",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "lasteditoruserid",
+              "targetFieldName": "lasteditoruserid"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "lasteditoruserid",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "COMMENT_ON_POST",
+      "fromNodeLabel": "Comments",
+      "toNodeLabel": "Posts",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "comments",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "postid",
+              "targetFieldName": "postid"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "postid",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "COMMENT_BY_USER",
+      "fromNodeLabel": "Comments",
+      "toNodeLabel": "Users",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "comments",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "userid",
+              "targetFieldName": "userid"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "userid",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "VOTE_ON_POST",
+      "fromNodeLabel": "Votes",
+      "toNodeLabel": "Posts",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "votes",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "postid",
+              "targetFieldName": "postid"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "postid",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "VOTE_BY_USER",
+      "fromNodeLabel": "Votes",
+      "toNodeLabel": "Users",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "votes",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "userid",
+              "targetFieldName": "userid"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "userid",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "BADGE_AWARDED_TO_USER",
+      "fromNodeLabel": "Badges",
+      "toNodeLabel": "Users",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "badges",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "userid",
+              "targetFieldName": "userid"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "userid",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "HISTORY_OF_POST",
+      "fromNodeLabel": "Posthistory",
+      "toNodeLabel": "Posts",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "posthistory",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "postid",
+              "targetFieldName": "postid"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "postid",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "HISTORY_BY_USER",
+      "fromNodeLabel": "Posthistory",
+      "toNodeLabel": "Users",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "posthistory",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "userid",
+              "targetFieldName": "userid"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "userid",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "POSTLINK_FROM_POST",
+      "fromNodeLabel": "Postlinks",
+      "toNodeLabel": "Posts",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "postlinks",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "postid",
+              "targetFieldName": "postid"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "postid",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "POSTLINK_TO_POST",
+      "fromNodeLabel": "Postlinks",
+      "toNodeLabel": "Posts",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "postlinks",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "relatedpostid",
+              "targetFieldName": "relatedpostid"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "relatedpostid",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "POST_REPLY_TO_POST",
+      "fromNodeLabel": "Posts",
+      "toNodeLabel": "Posts",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "posts",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "parentid",
+              "targetFieldName": "parentid"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "parentid",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "POST_HAS_ACCEPTED_ANSWER",
+      "fromNodeLabel": "Posts",
+      "toNodeLabel": "Posts",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "posts",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "acceptedanswerid",
+              "targetFieldName": "acceptedanswerid"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "acceptedanswerid",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "TAG_EXCERPT_POST",
+      "fromNodeLabel": "Tags",
+      "toNodeLabel": "Posts",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "tags",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "excerptpostid",
+              "targetFieldName": "excerptpostid"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "excerptpostid",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "TAG_WIKI_POST",
+      "fromNodeLabel": "Tags",
+      "toNodeLabel": "Posts",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "codebase_community",
+          "table": "tags",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "wikipostid",
+              "targetFieldName": "wikipostid"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "wikipostid",
+          "type": "Long"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,444 @@
+{
+  "catalog": [
+    {
+      "name": "bird_dev_mini",
+      "type": "postgresql",
+      "jdbc": {
+        "username": "root",
+        "password": "123123",
+        "jdbcUri": "jdbc:postgresql://postgres:5432/bird_dev_mini",
+        "enableMetaCache": "true",
+        "metaCacheExpireSec": "600"
+      }
+    }
+  ],
+  "node": [
+    {
+      "label": "Customers",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "debit_card_specializing",
+          "table": "customers",
+          "mappedField": [
+            {
+              "sourceFieldName": "customerid",
+              "targetFieldName": "customerid"
+            },
+            {
+              "sourceFieldName": "segment",
+              "targetFieldName": "segment"
+            },
+            {
+              "sourceFieldName": "currency",
+              "targetFieldName": "currency"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "customerid",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "customerid",
+          "type": "Long"
+        },
+        {
+          "name": "segment",
+          "type": "String"
+        },
+        {
+          "name": "currency",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Gasstations",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "debit_card_specializing",
+          "table": "gasstations",
+          "mappedField": [
+            {
+              "sourceFieldName": "gasstationid",
+              "targetFieldName": "gasstationid"
+            },
+            {
+              "sourceFieldName": "chainid",
+              "targetFieldName": "chainid"
+            },
+            {
+              "sourceFieldName": "country",
+              "targetFieldName": "country"
+            },
+            {
+              "sourceFieldName": "segment",
+              "targetFieldName": "segment"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "gasstationid",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "gasstationid",
+          "type": "Long"
+        },
+        {
+          "name": "chainid",
+          "type": "Long"
+        },
+        {
+          "name": "country",
+          "type": "String"
+        },
+        {
+          "name": "segment",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Products",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "debit_card_specializing",
+          "table": "products",
+          "mappedField": [
+            {
+              "sourceFieldName": "productid",
+              "targetFieldName": "productid"
+            },
+            {
+              "sourceFieldName": "description",
+              "targetFieldName": "description"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "productid",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "productid",
+          "type": "Long"
+        },
+        {
+          "name": "description",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Transactions1k",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "debit_card_specializing",
+          "table": "transactions_1k",
+          "mappedField": [
+            {
+              "sourceFieldName": "transactionid",
+              "targetFieldName": "transactionid"
+            },
+            {
+              "sourceFieldName": "date",
+              "targetFieldName": "date"
+            },
+            {
+              "sourceFieldName": "time",
+              "targetFieldName": "time"
+            },
+            {
+              "sourceFieldName": "customerid",
+              "targetFieldName": "customerid"
+            },
+            {
+              "sourceFieldName": "cardid",
+              "targetFieldName": "cardid"
+            },
+            {
+              "sourceFieldName": "gasstationid",
+              "targetFieldName": "gasstationid"
+            },
+            {
+              "sourceFieldName": "productid",
+              "targetFieldName": "productid"
+            },
+            {
+              "sourceFieldName": "amount",
+              "targetFieldName": "amount"
+            },
+            {
+              "sourceFieldName": "price",
+              "targetFieldName": "price"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "transactionid",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "transactionid",
+          "type": "Long"
+        },
+        {
+          "name": "date",
+          "type": "Date"
+        },
+        {
+          "name": "time",
+          "type": "String"
+        },
+        {
+          "name": "customerid",
+          "type": "Long"
+        },
+        {
+          "name": "cardid",
+          "type": "Long"
+        },
+        {
+          "name": "gasstationid",
+          "type": "Long"
+        },
+        {
+          "name": "productid",
+          "type": "Long"
+        },
+        {
+          "name": "amount",
+          "type": "Long"
+        },
+        {
+          "name": "price",
+          "type": "Float"
+        }
+      ]
+    },
+    {
+      "label": "Yearmonth",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "debit_card_specializing",
+          "table": "yearmonth",
+          "mappedField": [
+            {
+              "sourceFieldName": "customerid",
+              "targetFieldName": "customerid"
+            },
+            {
+              "sourceFieldName": "date",
+              "targetFieldName": "date"
+            },
+            {
+              "sourceFieldName": "consumption",
+              "targetFieldName": "consumption"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "customerid",
+          "type": "Long"
+        },
+        {
+          "name": "date",
+          "type": "String"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "customerid",
+          "type": "Long"
+        },
+        {
+          "name": "date",
+          "type": "String"
+        },
+        {
+          "name": "consumption",
+          "type": "Float"
+        }
+      ]
+    }
+  ],
+  "edge": [
+    {
+      "label": "TRANSACTION_BY_CUSTOMER",
+      "fromNodeLabel": "Transactions1k",
+      "toNodeLabel": "Customers",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "debit_card_specializing",
+          "table": "transactions_1k",
+          "mappedField": [
+            {
+              "sourceFieldName": "transactionid",
+              "targetFieldName": "transactionid"
+            },
+            {
+              "sourceFieldName": "customerid",
+              "targetFieldName": "customerid"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "transactionid",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "customerid",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "TRANSACTION_AT_STATION",
+      "fromNodeLabel": "Transactions1k",
+      "toNodeLabel": "Gasstations",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "debit_card_specializing",
+          "table": "transactions_1k",
+          "mappedField": [
+            {
+              "sourceFieldName": "transactionid",
+              "targetFieldName": "transactionid"
+            },
+            {
+              "sourceFieldName": "gasstationid",
+              "targetFieldName": "gasstationid"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "transactionid",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "gasstationid",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "TRANSACTION_FOR_PRODUCT",
+      "fromNodeLabel": "Transactions1k",
+      "toNodeLabel": "Products",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "debit_card_specializing",
+          "table": "transactions_1k",
+          "mappedField": [
+            {
+              "sourceFieldName": "transactionid",
+              "targetFieldName": "transactionid"
+            },
+            {
+              "sourceFieldName": "productid",
+              "targetFieldName": "productid"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "transactionid",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "productid",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "CONSUMPTION_OF_CUSTOMER",
+      "fromNodeLabel": "Yearmonth",
+      "toNodeLabel": "Customers",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "debit_card_specializing",
+          "table": "yearmonth",
+          "mappedField": [
+            {
+              "sourceFieldName": "customerid",
+              "targetFieldName": "customerid"
+            },
+            {
+              "sourceFieldName": "date",
+              "targetFieldName": "date"
+            },
+            {
+              "sourceFieldName": "customerid",
+              "targetFieldName": "target_customer_id"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "customerid",
+          "type": "Long"
+        },
+        {
+          "name": "date",
+          "type": "String"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "target_customer_id",
+          "type": "Long"
+        }
+      ]
+    }
+  ]
+}

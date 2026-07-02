@@ -1,0 +1,1240 @@
+{
+  "catalog": [
+    {
+      "name": "bird_dev_mini",
+      "type": "postgresql",
+      "jdbc": {
+        "username": "root",
+        "password": "123123",
+        "jdbcUri": "jdbc:postgresql://postgres:5432/bird_dev_mini",
+        "enableMetaCache": "true",
+        "metaCacheExpireSec": "600"
+      }
+    }
+  ],
+  "node": [
+    {
+      "label": "Cards",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "card_games",
+          "table": "cards",
+          "mappedField": [
+            {
+              "sourceFieldName": "uuid",
+              "targetFieldName": "uuid"
+            },
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "name",
+              "targetFieldName": "name"
+            },
+            {
+              "sourceFieldName": "asciiname",
+              "targetFieldName": "asciiname"
+            },
+            {
+              "sourceFieldName": "artist",
+              "targetFieldName": "artist"
+            },
+            {
+              "sourceFieldName": "availability",
+              "targetFieldName": "availability"
+            },
+            {
+              "sourceFieldName": "bordercolor",
+              "targetFieldName": "bordercolor"
+            },
+            {
+              "sourceFieldName": "coloridentity",
+              "targetFieldName": "coloridentity"
+            },
+            {
+              "sourceFieldName": "colors",
+              "targetFieldName": "colors"
+            },
+            {
+              "sourceFieldName": "convertedmanacost",
+              "targetFieldName": "convertedmanacost"
+            },
+            {
+              "sourceFieldName": "manacost",
+              "targetFieldName": "manacost"
+            },
+            {
+              "sourceFieldName": "power",
+              "targetFieldName": "power"
+            },
+            {
+              "sourceFieldName": "toughness",
+              "targetFieldName": "toughness"
+            },
+            {
+              "sourceFieldName": "loyalty",
+              "targetFieldName": "loyalty"
+            },
+            {
+              "sourceFieldName": "types",
+              "targetFieldName": "types"
+            },
+            {
+              "sourceFieldName": "subtypes",
+              "targetFieldName": "subtypes"
+            },
+            {
+              "sourceFieldName": "supertypes",
+              "targetFieldName": "supertypes"
+            },
+            {
+              "sourceFieldName": "type",
+              "targetFieldName": "type"
+            },
+            {
+              "sourceFieldName": "rarity",
+              "targetFieldName": "rarity"
+            },
+            {
+              "sourceFieldName": "setcode",
+              "targetFieldName": "setcode"
+            },
+            {
+              "sourceFieldName": "number",
+              "targetFieldName": "number"
+            },
+            {
+              "sourceFieldName": "text",
+              "targetFieldName": "text"
+            },
+            {
+              "sourceFieldName": "flavortext",
+              "targetFieldName": "flavortext"
+            },
+            {
+              "sourceFieldName": "layout",
+              "targetFieldName": "layout"
+            },
+            {
+              "sourceFieldName": "frameversion",
+              "targetFieldName": "frameversion"
+            },
+            {
+              "sourceFieldName": "originaltype",
+              "targetFieldName": "originaltype"
+            },
+            {
+              "sourceFieldName": "originaltext",
+              "targetFieldName": "originaltext"
+            },
+            {
+              "sourceFieldName": "originalreleasedate",
+              "targetFieldName": "originalreleasedate"
+            },
+            {
+              "sourceFieldName": "hasfoil",
+              "targetFieldName": "hasfoil"
+            },
+            {
+              "sourceFieldName": "hasnonfoil",
+              "targetFieldName": "hasnonfoil"
+            },
+            {
+              "sourceFieldName": "isreserved",
+              "targetFieldName": "isreserved"
+            },
+            {
+              "sourceFieldName": "isreprint",
+              "targetFieldName": "isreprint"
+            },
+            {
+              "sourceFieldName": "isstarter",
+              "targetFieldName": "isstarter"
+            },
+            {
+              "sourceFieldName": "isstoryspotlight",
+              "targetFieldName": "isstoryspotlight"
+            },
+            {
+              "sourceFieldName": "isalternative",
+              "targetFieldName": "isalternative"
+            },
+            {
+              "sourceFieldName": "isfullart",
+              "targetFieldName": "isfullart"
+            },
+            {
+              "sourceFieldName": "isonlineonly",
+              "targetFieldName": "isonlineonly"
+            },
+            {
+              "sourceFieldName": "isoversized",
+              "targetFieldName": "isoversized"
+            },
+            {
+              "sourceFieldName": "ispromo",
+              "targetFieldName": "ispromo"
+            },
+            {
+              "sourceFieldName": "istextless",
+              "targetFieldName": "istextless"
+            },
+            {
+              "sourceFieldName": "istimeshifted",
+              "targetFieldName": "istimeshifted"
+            },
+            {
+              "sourceFieldName": "hasalternativedecklimit",
+              "targetFieldName": "hasalternativedecklimit"
+            },
+            {
+              "sourceFieldName": "hascontentwarning",
+              "targetFieldName": "hascontentwarning"
+            },
+            {
+              "sourceFieldName": "multiverseid",
+              "targetFieldName": "multiverseid"
+            },
+            {
+              "sourceFieldName": "scryfallid",
+              "targetFieldName": "scryfallid"
+            },
+            {
+              "sourceFieldName": "scryfalloracleid",
+              "targetFieldName": "scryfalloracleid"
+            },
+            {
+              "sourceFieldName": "scryfallillustrationid",
+              "targetFieldName": "scryfallillustrationid"
+            },
+            {
+              "sourceFieldName": "cardkingdomid",
+              "targetFieldName": "cardkingdomid"
+            },
+            {
+              "sourceFieldName": "cardkingdomfoilid",
+              "targetFieldName": "cardkingdomfoilid"
+            },
+            {
+              "sourceFieldName": "mcmid",
+              "targetFieldName": "mcmid"
+            },
+            {
+              "sourceFieldName": "mcmmetaid",
+              "targetFieldName": "mcmmetaid"
+            },
+            {
+              "sourceFieldName": "tcgplayerproductid",
+              "targetFieldName": "tcgplayerproductid"
+            },
+            {
+              "sourceFieldName": "mtgarenaid",
+              "targetFieldName": "mtgarenaid"
+            },
+            {
+              "sourceFieldName": "mtgjsonv4id",
+              "targetFieldName": "mtgjsonv4id"
+            },
+            {
+              "sourceFieldName": "mtgoid",
+              "targetFieldName": "mtgoid"
+            },
+            {
+              "sourceFieldName": "mtgofoilid",
+              "targetFieldName": "mtgofoilid"
+            },
+            {
+              "sourceFieldName": "keywords",
+              "targetFieldName": "keywords"
+            },
+            {
+              "sourceFieldName": "faceconvertedmanacost",
+              "targetFieldName": "faceconvertedmanacost"
+            },
+            {
+              "sourceFieldName": "facename",
+              "targetFieldName": "facename"
+            },
+            {
+              "sourceFieldName": "flavorname",
+              "targetFieldName": "flavorname"
+            },
+            {
+              "sourceFieldName": "hand",
+              "targetFieldName": "hand"
+            },
+            {
+              "sourceFieldName": "life",
+              "targetFieldName": "life"
+            },
+            {
+              "sourceFieldName": "dueldeck",
+              "targetFieldName": "dueldeck"
+            },
+            {
+              "sourceFieldName": "leadershipskills",
+              "targetFieldName": "leadershipskills"
+            },
+            {
+              "sourceFieldName": "edhrecrank",
+              "targetFieldName": "edhrecrank"
+            },
+            {
+              "sourceFieldName": "colorindicator",
+              "targetFieldName": "colorindicator"
+            },
+            {
+              "sourceFieldName": "frameeffects",
+              "targetFieldName": "frameeffects"
+            },
+            {
+              "sourceFieldName": "watermark",
+              "targetFieldName": "watermark"
+            },
+            {
+              "sourceFieldName": "otherfaceids",
+              "targetFieldName": "otherfaceids"
+            },
+            {
+              "sourceFieldName": "printings",
+              "targetFieldName": "printings"
+            },
+            {
+              "sourceFieldName": "promotypes",
+              "targetFieldName": "promotypes"
+            },
+            {
+              "sourceFieldName": "purchaseurls",
+              "targetFieldName": "purchaseurls"
+            },
+            {
+              "sourceFieldName": "side",
+              "targetFieldName": "side"
+            },
+            {
+              "sourceFieldName": "variations",
+              "targetFieldName": "variations"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "uuid",
+          "type": "String"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "uuid",
+          "type": "String"
+        },
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "asciiname",
+          "type": "String"
+        },
+        {
+          "name": "artist",
+          "type": "String"
+        },
+        {
+          "name": "availability",
+          "type": "String"
+        },
+        {
+          "name": "bordercolor",
+          "type": "String"
+        },
+        {
+          "name": "coloridentity",
+          "type": "String"
+        },
+        {
+          "name": "colors",
+          "type": "String"
+        },
+        {
+          "name": "convertedmanacost",
+          "type": "Float"
+        },
+        {
+          "name": "manacost",
+          "type": "String"
+        },
+        {
+          "name": "power",
+          "type": "String"
+        },
+        {
+          "name": "toughness",
+          "type": "String"
+        },
+        {
+          "name": "loyalty",
+          "type": "String"
+        },
+        {
+          "name": "types",
+          "type": "String"
+        },
+        {
+          "name": "subtypes",
+          "type": "String"
+        },
+        {
+          "name": "supertypes",
+          "type": "String"
+        },
+        {
+          "name": "type",
+          "type": "String"
+        },
+        {
+          "name": "rarity",
+          "type": "String"
+        },
+        {
+          "name": "setcode",
+          "type": "String"
+        },
+        {
+          "name": "number",
+          "type": "String"
+        },
+        {
+          "name": "text",
+          "type": "String"
+        },
+        {
+          "name": "flavortext",
+          "type": "String"
+        },
+        {
+          "name": "layout",
+          "type": "String"
+        },
+        {
+          "name": "frameversion",
+          "type": "String"
+        },
+        {
+          "name": "originaltype",
+          "type": "String"
+        },
+        {
+          "name": "originaltext",
+          "type": "String"
+        },
+        {
+          "name": "originalreleasedate",
+          "type": "String"
+        },
+        {
+          "name": "hasfoil",
+          "type": "Long"
+        },
+        {
+          "name": "hasnonfoil",
+          "type": "Long"
+        },
+        {
+          "name": "isreserved",
+          "type": "Long"
+        },
+        {
+          "name": "isreprint",
+          "type": "Long"
+        },
+        {
+          "name": "isstarter",
+          "type": "Long"
+        },
+        {
+          "name": "isstoryspotlight",
+          "type": "Long"
+        },
+        {
+          "name": "isalternative",
+          "type": "Long"
+        },
+        {
+          "name": "isfullart",
+          "type": "Long"
+        },
+        {
+          "name": "isonlineonly",
+          "type": "Long"
+        },
+        {
+          "name": "isoversized",
+          "type": "Long"
+        },
+        {
+          "name": "ispromo",
+          "type": "Long"
+        },
+        {
+          "name": "istextless",
+          "type": "Long"
+        },
+        {
+          "name": "istimeshifted",
+          "type": "Long"
+        },
+        {
+          "name": "hasalternativedecklimit",
+          "type": "Long"
+        },
+        {
+          "name": "hascontentwarning",
+          "type": "Long"
+        },
+        {
+          "name": "multiverseid",
+          "type": "String"
+        },
+        {
+          "name": "scryfallid",
+          "type": "String"
+        },
+        {
+          "name": "scryfalloracleid",
+          "type": "String"
+        },
+        {
+          "name": "scryfallillustrationid",
+          "type": "String"
+        },
+        {
+          "name": "cardkingdomid",
+          "type": "String"
+        },
+        {
+          "name": "cardkingdomfoilid",
+          "type": "String"
+        },
+        {
+          "name": "mcmid",
+          "type": "String"
+        },
+        {
+          "name": "mcmmetaid",
+          "type": "String"
+        },
+        {
+          "name": "tcgplayerproductid",
+          "type": "String"
+        },
+        {
+          "name": "mtgarenaid",
+          "type": "String"
+        },
+        {
+          "name": "mtgjsonv4id",
+          "type": "String"
+        },
+        {
+          "name": "mtgoid",
+          "type": "String"
+        },
+        {
+          "name": "mtgofoilid",
+          "type": "String"
+        },
+        {
+          "name": "keywords",
+          "type": "String"
+        },
+        {
+          "name": "faceconvertedmanacost",
+          "type": "Float"
+        },
+        {
+          "name": "facename",
+          "type": "String"
+        },
+        {
+          "name": "flavorname",
+          "type": "String"
+        },
+        {
+          "name": "hand",
+          "type": "String"
+        },
+        {
+          "name": "life",
+          "type": "String"
+        },
+        {
+          "name": "dueldeck",
+          "type": "String"
+        },
+        {
+          "name": "leadershipskills",
+          "type": "String"
+        },
+        {
+          "name": "edhrecrank",
+          "type": "Long"
+        },
+        {
+          "name": "colorindicator",
+          "type": "String"
+        },
+        {
+          "name": "frameeffects",
+          "type": "String"
+        },
+        {
+          "name": "watermark",
+          "type": "String"
+        },
+        {
+          "name": "otherfaceids",
+          "type": "String"
+        },
+        {
+          "name": "printings",
+          "type": "String"
+        },
+        {
+          "name": "promotypes",
+          "type": "String"
+        },
+        {
+          "name": "purchaseurls",
+          "type": "String"
+        },
+        {
+          "name": "side",
+          "type": "String"
+        },
+        {
+          "name": "variations",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Sets",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "card_games",
+          "table": "sets",
+          "mappedField": [
+            {
+              "sourceFieldName": "code",
+              "targetFieldName": "code"
+            },
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "name",
+              "targetFieldName": "name"
+            },
+            {
+              "sourceFieldName": "block",
+              "targetFieldName": "block"
+            },
+            {
+              "sourceFieldName": "type",
+              "targetFieldName": "type"
+            },
+            {
+              "sourceFieldName": "releasedate",
+              "targetFieldName": "releasedate"
+            },
+            {
+              "sourceFieldName": "basesetsize",
+              "targetFieldName": "basesetsize"
+            },
+            {
+              "sourceFieldName": "totalsetsize",
+              "targetFieldName": "totalsetsize"
+            },
+            {
+              "sourceFieldName": "booster",
+              "targetFieldName": "booster"
+            },
+            {
+              "sourceFieldName": "isfoilonly",
+              "targetFieldName": "isfoilonly"
+            },
+            {
+              "sourceFieldName": "isforeignonly",
+              "targetFieldName": "isforeignonly"
+            },
+            {
+              "sourceFieldName": "isnonfoilonly",
+              "targetFieldName": "isnonfoilonly"
+            },
+            {
+              "sourceFieldName": "isonlineonly",
+              "targetFieldName": "isonlineonly"
+            },
+            {
+              "sourceFieldName": "ispartialpreview",
+              "targetFieldName": "ispartialpreview"
+            },
+            {
+              "sourceFieldName": "keyrunecode",
+              "targetFieldName": "keyrunecode"
+            },
+            {
+              "sourceFieldName": "mcmid",
+              "targetFieldName": "mcmid"
+            },
+            {
+              "sourceFieldName": "mcmname",
+              "targetFieldName": "mcmname"
+            },
+            {
+              "sourceFieldName": "mtgocode",
+              "targetFieldName": "mtgocode"
+            },
+            {
+              "sourceFieldName": "parentcode",
+              "targetFieldName": "parentcode"
+            },
+            {
+              "sourceFieldName": "tcgplayergroupid",
+              "targetFieldName": "tcgplayergroupid"
+            },
+            {
+              "sourceFieldName": "mcmidextras",
+              "targetFieldName": "mcmidextras"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "code",
+          "type": "String"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "code",
+          "type": "String"
+        },
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "block",
+          "type": "String"
+        },
+        {
+          "name": "type",
+          "type": "String"
+        },
+        {
+          "name": "releasedate",
+          "type": "Date"
+        },
+        {
+          "name": "basesetsize",
+          "type": "Long"
+        },
+        {
+          "name": "totalsetsize",
+          "type": "Long"
+        },
+        {
+          "name": "booster",
+          "type": "String"
+        },
+        {
+          "name": "isfoilonly",
+          "type": "Long"
+        },
+        {
+          "name": "isforeignonly",
+          "type": "Long"
+        },
+        {
+          "name": "isnonfoilonly",
+          "type": "Long"
+        },
+        {
+          "name": "isonlineonly",
+          "type": "Long"
+        },
+        {
+          "name": "ispartialpreview",
+          "type": "Long"
+        },
+        {
+          "name": "keyrunecode",
+          "type": "String"
+        },
+        {
+          "name": "mcmid",
+          "type": "Long"
+        },
+        {
+          "name": "mcmname",
+          "type": "String"
+        },
+        {
+          "name": "mtgocode",
+          "type": "String"
+        },
+        {
+          "name": "parentcode",
+          "type": "String"
+        },
+        {
+          "name": "tcgplayergroupid",
+          "type": "Long"
+        },
+        {
+          "name": "mcmidextras",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "Legalities",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "card_games",
+          "table": "legalities",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "uuid",
+              "targetFieldName": "uuid"
+            },
+            {
+              "sourceFieldName": "format",
+              "targetFieldName": "format"
+            },
+            {
+              "sourceFieldName": "status",
+              "targetFieldName": "status"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "uuid",
+          "type": "String"
+        },
+        {
+          "name": "format",
+          "type": "String"
+        },
+        {
+          "name": "status",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "ForeignData",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "card_games",
+          "table": "foreign_data",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "uuid",
+              "targetFieldName": "uuid"
+            },
+            {
+              "sourceFieldName": "language",
+              "targetFieldName": "language"
+            },
+            {
+              "sourceFieldName": "name",
+              "targetFieldName": "name"
+            },
+            {
+              "sourceFieldName": "text",
+              "targetFieldName": "text"
+            },
+            {
+              "sourceFieldName": "type",
+              "targetFieldName": "type"
+            },
+            {
+              "sourceFieldName": "flavortext",
+              "targetFieldName": "flavortext"
+            },
+            {
+              "sourceFieldName": "multiverseid",
+              "targetFieldName": "multiverseid"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "uuid",
+          "type": "String"
+        },
+        {
+          "name": "language",
+          "type": "String"
+        },
+        {
+          "name": "name",
+          "type": "String"
+        },
+        {
+          "name": "text",
+          "type": "String"
+        },
+        {
+          "name": "type",
+          "type": "String"
+        },
+        {
+          "name": "flavortext",
+          "type": "String"
+        },
+        {
+          "name": "multiverseid",
+          "type": "Long"
+        }
+      ]
+    },
+    {
+      "label": "Rulings",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "card_games",
+          "table": "rulings",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "uuid",
+              "targetFieldName": "uuid"
+            },
+            {
+              "sourceFieldName": "date",
+              "targetFieldName": "date"
+            },
+            {
+              "sourceFieldName": "text",
+              "targetFieldName": "text"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "uuid",
+          "type": "String"
+        },
+        {
+          "name": "date",
+          "type": "Date"
+        },
+        {
+          "name": "text",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "SetTranslations",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "card_games",
+          "table": "set_translations",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "setcode",
+              "targetFieldName": "setcode"
+            },
+            {
+              "sourceFieldName": "language",
+              "targetFieldName": "language"
+            },
+            {
+              "sourceFieldName": "translation",
+              "targetFieldName": "translation"
+            }
+          ]
+        }
+      },
+      "id": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "attribute": [
+        {
+          "name": "id",
+          "type": "Long"
+        },
+        {
+          "name": "setcode",
+          "type": "String"
+        },
+        {
+          "name": "language",
+          "type": "String"
+        },
+        {
+          "name": "translation",
+          "type": "String"
+        }
+      ]
+    }
+  ],
+  "edge": [
+    {
+      "label": "CARD_IN_SET",
+      "fromNodeLabel": "Cards",
+      "toNodeLabel": "Sets",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "card_games",
+          "table": "cards",
+          "mappedField": [
+            {
+              "sourceFieldName": "uuid",
+              "targetFieldName": "uuid"
+            },
+            {
+              "sourceFieldName": "setcode",
+              "targetFieldName": "setcode"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "uuid",
+          "type": "String"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "setcode",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "LEGALITY_FOR_CARD",
+      "fromNodeLabel": "Legalities",
+      "toNodeLabel": "Cards",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "card_games",
+          "table": "legalities",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "uuid",
+              "targetFieldName": "uuid"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "uuid",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "FOREIGN_DATA_FOR_CARD",
+      "fromNodeLabel": "ForeignData",
+      "toNodeLabel": "Cards",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "card_games",
+          "table": "foreign_data",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "uuid",
+              "targetFieldName": "uuid"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "uuid",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "RULING_FOR_CARD",
+      "fromNodeLabel": "Rulings",
+      "toNodeLabel": "Cards",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "card_games",
+          "table": "rulings",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "uuid",
+              "targetFieldName": "uuid"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "uuid",
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "label": "SET_TRANSLATION_FOR_SET",
+      "fromNodeLabel": "SetTranslations",
+      "toNodeLabel": "Sets",
+      "dataSourceGroup": {
+        "externalDataSource": {
+          "enabled": true,
+          "catalog": "bird_dev_mini",
+          "schema": "card_games",
+          "table": "set_translations",
+          "mappedField": [
+            {
+              "sourceFieldName": "id",
+              "targetFieldName": "id"
+            },
+            {
+              "sourceFieldName": "setcode",
+              "targetFieldName": "setcode"
+            }
+          ]
+        }
+      },
+      "fromKey": [
+        {
+          "name": "id",
+          "type": "Long"
+        }
+      ],
+      "toKey": [
+        {
+          "name": "setcode",
+          "type": "String"
+        }
+      ]
+    }
+  ]
+}
